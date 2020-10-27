@@ -1,0 +1,29 @@
+body{
+    margin:0px;
+    background-color: #3E8C3E;
+    font-family:Verdana;
+}
+nav,footer{
+    background-color: #092309;
+    padding: 1em;
+    color:white;
+}
+header{
+    text-align: center;
+    padding: 0.5em;
+}
+.contenido{
+    padding: 1em;
+    background-color: lightgray;
+}
+a{
+    color:white;
+    text-decoration: none;
+    margin:0.5em;
+}
+p{
+    width:60%;
+}
+button{
+    margin: 0em;
+}

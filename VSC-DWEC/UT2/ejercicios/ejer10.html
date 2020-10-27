@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var entrada = prompt("Introduce la provincia:");
+        var provincias =
+            ['Alava', 'Albacete', 'Alicante', 'Almería', 'Asturias', 'Avila', 'Badajoz', 'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Cantabria', 'Castellón', 'Ciudad Real', 'Córdoba', 'LaCoruña', 'Cuenca', 'Gerona', 'Granada', 'Guadalajara',
+                'Guipúzcoa', 'Huelva', 'Huesca', 'IslasBaleares', 'Jaén', 'León', 'Lérida', 'Lugo', 'Madrid', 'Málaga', 'Murcia', 'Navarra',
+                'Orense', 'Palencia', 'Las Palmas', 'Pontevedra', 'LaRioja', 'Salamanca', 'Segovia', 'Sevilla', 'Soria', 'Tarragona',
+                'Santa Cruz deTenerife', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Vizcaya', 'Zamora', 'Zaragoza'];
+        var existeIgual = provincias.find(element => element == entrada);
+        var existe = provincias.find(element => element.toUpperCase() == entrada.toUpperCase());
+        if (existe != null) {
+            if (existeIgual != null)
+                alert("Existe");
+            else
+                alert("Existe, pero esta escrito de otra manera");
+        } else
+            alert("No existe");
+    </script>
+</body>
+
+</html>

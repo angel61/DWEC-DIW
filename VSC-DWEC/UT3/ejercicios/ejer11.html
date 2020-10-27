@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = [];
+        var entrada = ""
+        do {
+            entrada = prompt("Introduce numero (* para finalizar):");
+            if (!isNaN(entrada))
+                array.push(parseInt(entrada));
+        } while (entrada != "*");
+
+        var resultado = [];
+        resultado["par"] = 0;
+        resultado["impar"] = 0;
+        array.forEach(element => {
+            if (element % 2 == 0)
+                ++resultado["par"]
+            else
+                ++resultado["impar"]
+        });
+        alert(`Numero de numeros pares: ${resultado["par"]}\nNumero de numeros impares: ${resultado["impar"]}`);
+    </script>
+</body>
+
+</html>

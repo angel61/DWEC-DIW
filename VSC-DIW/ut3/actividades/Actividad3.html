@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Curriculum vitae</h1>
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="nombre">Nombre:</label>
+                        </td>
+                        <td>
+                            <input id="nombre" type="text" maxlength="10"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="apellidos">Apellidos:</label>
+                        </td>
+                        <td>
+                            <input id="apellidos" type="text" maxlength="20"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="correo">Correo electrónico:</label>
+                        </td>
+                        <td>
+                            <input id="correo" type="email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="telefono">Telefono:</label>
+                        </td>
+                        <td>
+                            <input id="telefono" type="tel"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fecha">Fecha de nacimiento:</label>
+                        </td>
+                        <td>
+                            <input id="fecha" type="date"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="edad">Edad:</label>
+                        </td>
+                        <td>
+                            <input id="edad" type="text" min="0" max="120">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="color">Color favorito:</label>
+                        </td>
+                        <td>
+                            <input id="color" type="color">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nacionalidad">Nacionalidad:</label>
+                        </td>
+                        <td>
+                            <select id="nacionalidad">
+                                <option>España</option>
+                                <option>Italia</option>
+                                <option>Portugal</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="sexo"></label>
+                        </td>
+                        <td>
+                            <input name="sexo" value="Hombre" type="radio" checked="checked">Hombre
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input name="sexo" value="Mujer" type="radio">Mujer
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Habilidades</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="lider">Liderazgo:</label>
+                        </td>
+                        <td>
+                            <input id="lider" type="range"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="comunicacion">Comunicacion:</label>
+                        </td>
+                        <td>
+                            <input id="comunicacion" type="range"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="motivacion">Motivacion:</label>
+                        </td>
+                        <td>
+                            <input id="motivacion" type="range"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="vision">Vision de negocio:</label>
+                        </td>
+                        <td>
+                            <input id="vision" type="range"/>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Idiomas</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <input id="idiomas" value="castellano" type="checkbox"/>Castellano
+                        </td>
+                        <td>
+                            <input id="idiomas" value="ingles" type="checkbox"/>Ingles
+                        </td>
+                        <td>
+                            <input id="idiomas" value="frances" type="checkbox"/>Frances
+                        </td>
+                        <td>
+                            <input id="idiomas" value="aleman" type="checkbox"/>Aleman
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="idiomas" value="italiano" type="checkbox"/>Italiano
+                        </td>
+                        <td>
+                            <input id="idiomas" value="portugues" type="checkbox"/>Portugues
+                        </td>
+                        <td>
+                            <input id="idiomas" value="chino" type="checkbox"/>Chino
+                        </td>
+                        <td>
+                            <input id="idiomas" value="japones" type="checkbox"/>Japones
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br><br>
+            <input value="Enviar Curriculum" type="submit"/>&nbsp;
+            <input value="Reset"  type="reset"/>
+        </form>
+    </div>
+</body>
+</html>

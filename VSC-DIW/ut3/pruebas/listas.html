@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2bf8f3b8fb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h2 {
+            clear: both;
+            margin-bottom: 0.5em;
+            padding-top: 1em;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul.lista2 {
+            text-align: center;
+        }
+
+        ul.lista2 li {
+            display: inline;
+            border: white 2px solid;
+            border-color: white black black white;
+            padding: 0.5em;
+            background-color: white;
+        }
+
+        ul.lista2 li:hover {
+            border: white 2px solid;
+            border-color: black white white black;
+            background-color: lightgray;
+        }
+
+        ul.lista3 li {
+            width: 10em;
+            border: black 1px solid;
+            margin: 0.5em;
+            padding: 0.5em;
+            background-color: white;
+            text-align: center;
+        }
+
+        ul.lista4 {
+            text-align: center;
+        }
+
+        ul.lista4 li {
+            display: inline-block;
+            width: 10em;
+            padding: 0.5em 0em;
+        }
+
+        ul.lista4 li:nth-child(odd) {
+            color: blue;
+            background-color: white;
+        }
+
+        ul.lista4 li:nth-child(even) {
+            color: white;
+            background-color: blue;
+        }
+
+        #lista5 li {
+            display: inline;
+        }
+
+        #lista5 li a {
+            text-decoration: none;
+            padding: 30px;
+        }
+
+        #lista5 li img {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        .material-icons {
+            width: 20px;
+            height: 20px;
+            margin: 0.1em 0em;
+            margin-right: 0.5em;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Lista 2</h2>
+    <ul class="lista2">
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+        <li>cuatro</li>
+        <li>cinco</li>
+    </ul><br>
+    <h2>Lista 3</h2>
+    <ul class="lista3">
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+        <li>cuatro</li>
+        <li>cinco</li>
+    </ul><br>
+    <h2>Lista 4</h2>
+    <ul class="lista4">
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+        <li>cuatro</li>
+        <li>cinco</li>
+    </ul><br>
+    <h2>Lista 5</h2>
+    <ul id="lista5">
+        <li><a href="enlace1.html"><img src="https://picsum.photos/id/684/20/20" alt="descripcion">Enlace 1</a></li>
+        <li><a href="enlace1.html"><img src="https://picsum.photos/id/684/20/20" alt="descripcion">Enlace 2</a></li>
+        <li><a href="enlace1.html"><img src="https://picsum.photos/id/684/20/20" alt="descripcion">Enlace 3</a></li>
+    </ul><br>
+    <h2>Lista 6</h2>
+    <ul id="lista6">
+        <li><i class="fas fa-ad"></i>uno</li>
+        <li><i class="fas fa-cloud"></i>dos</li>
+    </ul><br>
+    <h2>Lista 7</h2>
+    <ul id="lista7">
+        <li><span class="material-icons">account_box</span>uno</li>
+        <li><span class="material-icons">api</span>dos</li>
+        <li><span class="material-icons">credit_card</span>tres</li>
+        <li><span class="material-icons">done</span>cuatro</li>
+    </ul><br>
+</body>
+
+</html>

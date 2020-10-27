@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        do {
+            var entrada = prompt("Introduce el usuario:");
+        } while (isNaN(entrada) && entrada > 50);
+        var mensaje;
+        for (let i = 1; i <= parseInt(entrada); i++) {
+            mensaje = "";
+            for (let u = 1; u <= i; u++) {
+                mensaje += u;
+            }
+            console.log(mensaje);
+        }
+    </script>
+</body>
+
+</html>

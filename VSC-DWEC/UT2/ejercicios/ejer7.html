@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="posicionUno">
+    <br><br>
+    <input type="number" id="posicionDos">
+    <br><br>
+    <input type="button" value="Ejecutar" onclick="pareimpar()">
+    <script>
+        function pareimpar() {
+            var array = [1, 3, 5, 6, 7, 8, 10];
+            var posicionUno = parseInt(document.getElementById("posicionUno").value);
+            var posicionDos = parseInt(document.getElementById("posicionDos").value);
+
+            var resultado=0;
+            console.log("Suma de pares");
+            for(let i=0;i<array.length;i++){
+                if((i%2)==0)
+                resultado+=array[i];
+            }
+            console.log(resultado);
+
+            resultado=0;
+            console.log("Suma de impares");
+            for(let i=0;i<array.length;i++){
+                if((i%2)!=0)
+                resultado+=array[i];
+            }
+            console.log(resultado);
+
+            resultado=0;
+            console.log("Suma punto a a punto b");
+            for(let i=posicionUno;i<=posicionDos;i++){
+                resultado+=array[i];
+            }
+            console.log(resultado);
+        }
+    </script>
+</body>
+
+</html>

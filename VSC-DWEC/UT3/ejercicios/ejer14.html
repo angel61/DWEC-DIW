@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var rellenarArray = (texto) => {
+            var array = [];
+            var entrada = ""
+            do {
+                entrada = prompt(`Introduce numero del ${texto} array (* para finalizar):`);
+                if (!isNaN(entrada))
+                    array.push(parseInt(entrada));
+            } while (entrada != "*");
+            return array;
+        }
+
+        var array1 = rellenarArray("primer");
+        var array2 = rellenarArray("segundo");
+        var largo, corto;
+        if (array1.length > array2.length) {
+            largo = array1;
+            corto = array2;
+        } else {
+            largo = array2;
+            corto = array1;
+        }
+        for (let i = 0; i < corto.length; i++)
+            largo[i] += corto[i];
+        alert(largo)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td:first-child {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        input,
+        select {
+            border-radius: 25px;
+        }
+
+        thead input,
+        thead select {
+            width: 14em;
+        }
+
+        tbody input,
+        tbody select {
+            width: 7em;
+        }
+
+
+        input:hover,
+        select:hover {
+            color: white;
+            background-color: green;
+        }
+
+        input:focus,
+        select:focus {
+            color: white;
+            background-color: black;
+        }
+
+        input:active,
+        select:active {
+            color: white;
+            background-color: blue;
+        }
+
+        tbody tr:last-child {
+            text-align: right;
+        }
+
+        input[type="submit"] {
+            color: green;
+            background-color: rgb(88, 201, 54);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PROCESO DE REGISTRO</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Razon social</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Direccion</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Provincia</td>
+                <td>
+                    <select>
+                        <option value="">A Coruña</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Pais<br><br></td>
+                <td>
+                    <select>
+                        <option value="">España</option>
+                    </select><br><br>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Numero de colegiado</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Idioma</td>
+                <td>
+                    <select>
+                        <option value="">Castellano</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Telefono movil</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Telefono de contacto<br><br></td>
+                <td><input type="number"><br><br></td>
+            </tr>
+            <tr>
+                <td>Nombre de usuario</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Contraseña</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>Repetir contraseña</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit"><input type="reset" value="Borrar"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

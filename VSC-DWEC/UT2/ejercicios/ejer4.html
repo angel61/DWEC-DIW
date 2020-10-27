@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="numero">
+    <br><br>
+    <input type="button" value="Ejecutar" onclick="pareimpar()">
+    <script>
+        function pareimpar() {
+            var numero = parseInt(document.getElementById("numero").value);
+            console.log("Pares:");
+            for (var i = 1; i <= numero; i++) {
+                let division = i % 2;
+                if (division == 0) {
+                    console.log(i);
+                }
+            }
+
+            console.log("\nImpares:");
+            for (var i = 1; i <= numero; i++) {
+                let division = i % 2;
+                if (division != 0) {
+                    console.log(i);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

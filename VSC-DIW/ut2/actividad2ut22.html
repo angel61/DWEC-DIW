@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtr=device-widtr, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+        }
+
+        .container td {
+            color: grey;
+            background-color: lightgrey;
+            text-align: center;
+        }
+
+        .container th {
+            font-weight: bold;
+            font-size: 2em;
+            text-align: center;
+            color: white;
+            background-color: darkseagreen;
+            font-size: 15px;
+        }
+
+        .container td,
+        .container th {
+            height: 50px;
+        }
+
+        .container tfoot th {
+            background-color: white;
+            color: darkseagreen;
+            font-size: 2em;
+            font-weight: normal;
+        }
+
+        .container tfoot th:first-child {
+            color: grey;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .container thead th:empty {
+            background-color: transparent;
+        }
+
+
+        .container tbody td:hover {
+            background-color: white;
+            color: darkseagreen;
+        }
+
+        * {
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="container">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Smart Starter</th>
+                <th>Smart Medium</th>
+                <th>Smart Business</th>
+                <th>Smart Deluxe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Almacenamiento</th>
+                <td>512 MB</td>
+                <td>1 GB</td>
+                <td>2 GB</td>
+                <td>4 GB</td>
+            </tr>
+            <tr>
+                <th>Ancho de banda</th>
+                <td>50 GB</td>
+                <td>100 GB</td>
+                <td>150 GB</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <th>MySQL Databases</th>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <th>Setup</th>
+                <td>19.90€</td>
+                <td>12.90€</td>
+                <td>Gratis</td>
+                <td>Gratis</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Precio</th>
+                <th>2.90€</th>
+                <th>5.90€</th>
+                <th>9.90€</th>
+                <th>14.90€</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

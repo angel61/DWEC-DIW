@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="numero">
+    <br><br>
+    <input type="button" value="Ejecutar" onclick="pareimpar()">
+    <script>
+        function pareimpar() {
+            var resultado=1;
+            var numero = parseInt(document.getElementById("numero").value);
+            for(var i=1;i<=numero;i++){
+                resultado*=i;
+            }
+            console.log(resultado);
+        }
+    </script>
+</body>
+
+</html>

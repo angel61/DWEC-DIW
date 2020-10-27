@@ -1,0 +1,18 @@
+*{
+    text-align: center;
+}
+
+a{
+    color: red;
+    border: 1px solid purple;
+}
+
+.clase{
+    background-color: seashell;
+}
+p.clase{
+    border: 1px double yellowgreen;
+}
+#identificacion{
+    background-color: slategray;
+}

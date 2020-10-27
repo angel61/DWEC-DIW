@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+            var entradaFilas = parseInt(prompt("Introduce el numero de filas:"));
+            var entradaColumnas = parseInt(prompt("Introduce el numero de columnas:"));
+            var totalCeldas=entradaColumnas*entradaFilas;
+        var resultado=[];
+        for (let i = 0; i < entradaFilas; i++) {
+            resultado[i]=[];
+            for (let u = 0; u < entradaColumnas; u++) {
+                resultado[i][u]=totalCeldas--;
+            }
+        }
+        console.log(resultado);
+    </script>
+</body>
+
+</html>

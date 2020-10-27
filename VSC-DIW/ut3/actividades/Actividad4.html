@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0px;
+        }
+
+        .barra {
+            width: 25%;
+            height: 100vh;
+            float: left;
+            background-color: rgb(78, 78, 78);
+            box-sizing: border-box;
+        }
+
+        .barra h2 {
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            height: 1em 0em;
+            background-color: rgb(39, 39, 39);
+            color: whitesmoke;
+            box-sizing: border-box;
+            margin: 0.25em 0em;
+        }
+
+        .barra ul {
+            padding-left: 0em;
+            margin: 0em;
+            background-color: yellowgreen;
+        }
+
+        .barra ul li {
+            width: 100%;
+            height: 3em;
+            list-style: none;
+        }
+
+        #elem1 {
+            background: url("./img/buscar.png") 7% 45% no-repeat;
+            background-size: 20px;
+            background-color: rgb(39, 39, 39);
+        }
+
+        #elem2 {
+            background: url("./img/lapiz.png") 7% 45% no-repeat;
+            background-size: 20px;
+            background-color: rgb(39, 39, 39);
+        }
+
+        #elem3 {
+            background: url("./img/estrella.png") 7% 45% no-repeat;
+            background-size: 20px;
+            background-color: rgb(39, 39, 39);
+        }
+
+        #elem4 {
+            background: url("./img/play.png") 7% 45% no-repeat;
+            background-size: 20px;
+            background-color: rgb(39, 39, 39);
+        }
+
+        #elem1:hover {
+            background-color: rgb(48, 48, 48);
+        }
+
+        #elem2:hover {
+            background-color: rgb(48, 48, 48);
+        }
+
+        #elem3:hover {
+            background-color: rgb(48, 48, 48);
+        }
+
+        #elem4:hover {
+            background-color: rgb(48, 48, 48);
+        }
+
+        .barra ul li a {
+            display: block;
+            color: whitesmoke;
+            text-decoration: none;
+            width: inherit;
+            height: inherit;
+            padding: 0.75em;
+            box-sizing: border-box;
+            padding-left: 3em;
+        }
+
+        .barra ul li a:hover {
+            display: block;
+            color: whitesmoke;
+            background-color: rgb(48, 48, 48);
+            margin-left: 0.5em;
+            box-sizing: border-box;
+            transition: 0.1s;
+        }
+        button{
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="barra">
+        <h2>SIDEBAR</h2>
+        <ul id="lista6">
+            <li><a id="elem1" href="#1">Dashboard</a></li>
+            <li><a id="elem2" href="#2">Statistics</a></li>
+            <li><a id="elem3" href="#3">Milestones</a></li>
+            <li><a id="elem4" href="#4">Experiments</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculadora{
+            text-align: center;
+        }
+        #cajaTexto {
+            width: 15em;
+            height: 2em;
+            font-size: 2em;
+            text-align: right;
+        }
+        .teclas {
+            box-sizing: content-box;
+            width: 30em;
+            height: 30em;
+            margin: 0 auto;
+        }
+
+        .teclas div {
+            width: 100%;
+            height: 20%;
+        }
+
+        .teclas button {
+            display: inline-block;
+            width: 24%;
+            height: 100%;
+            font-size: 2em;
+        }
+
+        #btn0 {
+            width: 48.75%;
+        }
+button{
+    margin: 0em;
+}
+    </style>
+</head>
+
+<body>
+    <div class="calculadora">
+    <input type="text" id="cajaTexto" maxlength="10" readonly>
+    <br>
+    <div class="teclas">
+        <div>
+            <button id="btnAC" name="btn" value="ac">AC</button>
+            <button id="btnRaro" name="btn" value="raro">+/-</button>
+            <button id="btnResto" name="btn" value="%">%</button>
+            <button id="btnDiv" name="btn" value="/">/</button>
+        </div>
+        <div>
+            <button id="btn7" name="btn" value="7">7</button>
+            <button id="btn8" name="btn" value="8">8</button>
+            <button id="btn9" name="btn" value="9">9</button>
+            <button id="btnProd" name="btn" value="*">X</button>
+        </div>
+        <div>
+            <button id="btn4" name="btn" value="4">4</button>
+            <button id="btn5" name="btn" value="5">5</button>
+            <button id="btn6" name="btn" value="6">6</button>
+            <button id="btnMenos" name="btn" value="-">-</button>
+        </div>
+        <div>
+            <button id="btn1" name="btn" value="1">1</button>
+            <button id="btn2" name="btn" value="2">2</button>
+            <button id="btn3" name="btn" value="3">3</button>
+            <button id="btnMas" name="btn" value="+">+</button>
+        </div>
+        <div>
+            <button id="btn0" name="btn" value="0">0</button>
+            <button id="btnComa" name="btn" value=".">.</button>
+            <button id="btnIgual" name="btn" value="=">=</button>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="calculadora.js"></script>
+</body>
+
+</html>
