@@ -32,10 +32,10 @@ var fncResultado = () => {
     }
 }
 
-var escribir = function (evento) {
+var escribir = (evento) => {
     let elemento = evento.srcElement;
-    if (isNaN(cajaTexto.value))
-        cajaTexto.value = "";
+    if (isNaN(cajaTexto.value)&&(cajaTexto!="-"&&isNaN(elemento.value)))
+        cajaTexto.value = "0";
     if (elemento.value == "ac")
         fncReset();
     else if (elemento.value >= 0 && elemento.value <= 9) {
@@ -43,17 +43,22 @@ var escribir = function (evento) {
             cajaTexto.value = "";
             reset = false;
         }
-        if (cajaTexto.value.length < 10)
+        if (cajaTexto.value.length <= 10)
             cajaTexto.value += elemento.value;
     } else if (elemento.value == ".") {
-        if (cajaTexto.value.length < 8 && cajaTexto.value.length > 0 && cajaTexto.value.indexOf(".") == -1) 
+        if (cajaTexto.value.length < 8 && cajaTexto.value.length > 0 && cajaTexto.value.indexOf(".") == -1)
             cajaTexto.value += elemento.value;
-    } else {
-        if (parseFloat(cajaTexto.value) > 0) {
-            if (elemento.value != "=") {
+    } else if (elemento.value == "-" && (cajaTexto.value == "0" || reset)){
+        cajaTexto.value = "-";
+        reset = false;
+    }else {
+        if (parseFloat(cajaTexto.value) > 0 || parseFloat(cajaTexto.value) < 0) {
+            if (elemento.value == "+-")
+                cajaTexto.value = -1 * (parseFloat(cajaTexto.value));
+            else if (elemento.value != "=" && elemento.value != "+-") {
                 operacion = elemento.value;
                 fncOperacion();
-            } else 
+            } else
                 fncResultado();
         }
     }
