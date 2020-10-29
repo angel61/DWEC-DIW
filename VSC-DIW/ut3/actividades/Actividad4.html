@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{box-sizing: content-box;}
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0px;
@@ -33,7 +34,7 @@
         .barra ul {
             padding-left: 0em;
             margin: 0em;
-            background-color: yellowgreen;
+            background-color: rgb(39, 39, 39);
         }
 
         .barra ul li {
@@ -66,22 +67,6 @@
             background-color: rgb(39, 39, 39);
         }
 
-        #elem1:hover {
-            background-color: rgb(48, 48, 48);
-        }
-
-        #elem2:hover {
-            background-color: rgb(48, 48, 48);
-        }
-
-        #elem3:hover {
-            background-color: rgb(48, 48, 48);
-        }
-
-        #elem4:hover {
-            background-color: rgb(48, 48, 48);
-        }
-
         .barra ul li a {
             display: block;
             color: whitesmoke;
@@ -93,14 +78,18 @@
             padding-left: 3em;
         }
 
-        .barra ul li a:hover {
-            display: block;
-            color: whitesmoke;
-            background-color: rgb(48, 48, 48);
-            margin-left: 0.5em;
-            box-sizing: border-box;
-            transition: 0.1s;
-        }
+#lista6 li a:focus {
+    display: block;
+    color: whitesmoke;
+    background-color: rgb(48, 48, 48);
+    border-left:0.5em solid yellowgreen;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+
+#lista6 li a:hover {
+    background-color: rgb(65, 65, 65);
+}
         button{
             margin: 0px;
         }

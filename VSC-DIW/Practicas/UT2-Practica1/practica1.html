@@ -7,50 +7,120 @@
     <title>Practica 1 UT2 Angel</title>
     <link rel="stylesheet" href="practica1.css">
     <style>
-        *{box-sizing: border-box;}
-        body{
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin:0px;
-        }
-        .cabecera {}
-        .menu {
-            width: 100%;
-            position: sticky;
-            top: 0;
-            background-color: rgb(61, 61, 61);
-            color:white;
+            margin: 0px;
         }
 
-        .menu ul {
-            margin: 0 auto;
-            width: 60%;
-            padding: 0;
-        }
+.cabecera {
+    width: 100%;
+    height:2.3em;
+    top:0%;
+    background-color: rgb(78, 78, 78);
+    color: white;
+}
 
-        .menu ul li {
-            width: 24%;
-            padding: 2%;
-            text-align: center;
-            display: inline-block;
-        }
+.cabecera ul {
+    position: absolute;
+    top:0px;
+    margin:0px;
+    right:0px;
+    width: 40%;
+    padding-top: 0.5em;
+}
 
+.cabecera ul li {
+    width: 24%;
+    height: inherit;
+    text-align: center;
+    display: inline-block;
+}
+
+.cabecera ul li a {
+    color: white;
+    width:100%;
+    height: inherit;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cabecera ul li a:hover {
+    color: rgb(255, 221, 136);
+    transition: 0.1s;
+}
+
+.menu {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: rgb(61, 61, 61);
+    color: white;
+}
+
+.menu ul {
+    margin: 0 auto;
+    width: 60%;
+    padding: 0;
+}
+
+.menu ul li {
+    width: 24%;
+    height: inherit;
+    text-align: center;
+    display: inline-block;
+}
+
+.menu ul li a {
+    color: white;
+    width:100%;
+    height: inherit;
+    display: inline-block;
+    padding: 10%;
+    text-decoration: none;
+    border-bottom: 4px solid rgba(61, 61, 61, 0);
+}
+
+/*.menu ul li a:focus {
+    border-bottom: 3px solid goldenrod;
+    transition: 0.3s;
+}*/
+.menu ul li a:hover {
+    /*border-radius: 1em 1em 0em 0em;*/
+    background-color:  rgb(94, 94, 94);
+    border-bottom: 4px solid rgb(255, 221, 136);
+    transition: 0.1s;
+}
         .producto {
-            height: 200em;
+            width:100%;
+        }
+        .producto img{
+        width:100%;
         }
     </style>
 </head>
 
 <body>
-    <div class="cabecera">Titulo</div>
-    <div class="menu">
+    <div class="cabecera" id="inicio">
         <ul>
-            <li>Inicio</li>
-            <li>Sobre nosotros</li>
-            <li>Galeria</li>
-            <li>Informacion</li>
+            <li><a id="contacto" href="">Contacto</a></li>
+            <li><a id="noticias" href="">Noticias</a></li>
+            <li><a id="idioma" href="">Idioma</a></li>
+            <li><a id="redes" href=""></a></li>
         </ul>
     </div>
-    <div class="producto">a</div>
+    <div class="menu">
+        <ul>
+            <li><a id="inicio" href="#inicio">Inicio</a></li>
+            <li><a id="about" href="#2">Sobre nosotros</a></li>
+            <li><a id="galeria" href="#3">Galeria</a></li>
+            <li><a id="info" href="#4">Informacion</a></li>
+        </ul>
+    </div>
+    <div class="producto"><img src="img/SAFARI3.jpg"></div>
     <div class="imagenes"></div>
     <div class="elementoFijo"></div>
     <div class="footer"></div>
