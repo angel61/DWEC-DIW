@@ -54,14 +54,15 @@ var adivinarLetra = () => {
     txtAdivinar.value = "";
 
     let posicion = strPantalla.indexOf("_");
+    let hunoResultado =document.getElementById("resultado");
     if (vidas == 0) {
         txtAdivinar.disabled = true;
         btnAdivinar.disabled = true;
-        alert("PERDISTE!!!");
+        hunoResultado.innerHTML="PERDISTE!!!";
     } else if (posicion == -1) {
         txtAdivinar.disabled = true;
         btnAdivinar.disabled = true;
-        alert("GANASTE!!!!");
+        hunoResultado.innerHTML="GANASTE!!!!";
     }
 }
 btnAdivinar.addEventListener("click", adivinarLetra);
