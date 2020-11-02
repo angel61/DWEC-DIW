@@ -1,0 +1,37 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background: linear-gradient(to bottom right, rgb(37, 37, 37), rgb(209, 209, 209)) no-repeat;
+    background-size: cover;
+    height:97.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido{
+    margin:0 auto;
+    text-align: center;
+}
+.contenido h1{
+    color:white;
+}
+img{
+    padding: 2vw;
+    width: 20vw;
+    height:20vw;
+    border:2px solid white;
+    border-radius: 10%;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.342);
+}
+#resultado{   
+    top: 50%;
+    transform: translate(0%, -50%);
+    padding:1em;
+    color: white;
+    border: 0px;
+    border-radius: 1em;
+    
+    font-size:4em;
+}

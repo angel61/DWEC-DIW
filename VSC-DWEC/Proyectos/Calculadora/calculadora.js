@@ -1,44 +1,54 @@
+class Operacion {
+    numero1 = -1;
+    numero2 = -1;
+    operacion="";
+    resultado=-1;
+    constructor() {
+    }
+    fncOperacion = (numero) => {
+        if (this.numero1 == -1) {
+            this.numero1 = numero;
+        } else{
+            this.numero2 = numero;
+            switch (this.operacion) {
+                case "+": this.resultado = this.numero1 + this.numero2; break;
+                case "-": this.resultado = this.numero1 - this.numero2; break;
+                case "/": this.resultado = this.numero1 / this.numero2; break;
+                case "*": this.resultado = this.numero1 * this.numero2; break;
+                case "%": this.resultado = this.numero1 % this.numero2; break;
+                case "+-": this.resultado = -1 * (this.numero1); break;
+            }
+            return this.resultado;
+        }
+    }
+    fncReset = () => {
+        this.numero1 = -1;
+        this.numero2 = -1;
+        this.operacion="";
+    }
+    fncResultado = (numero) => {
+        if (this.numero1 != -1) {
+            this.fncOperacion(numero);
+            this.fncReset();
+            return this.resultado;
+        }
+    }
 
-var numero1 = -1;
-var operacion;
+}
+//import {Operacion} from 'objetoOperacion.js'
+var operacion=new Operacion();
 var cajaTexto = document.getElementById("cajaTexto");
 var reset = false;
 cajaTexto.value = "0";
-var fncOperacion = () => {
-    let value = cajaTexto.value;
-    if (numero1 == -1) {
-        numero1 = parseFloat(value);
-        reset = true;
-    } else {
-        let resultado;
-        switch (operacion) {
-            case "+": resultado = numero1 + parseFloat(value); break;
-            case "-": resultado = numero1 - parseFloat(value); break;
-            case "/": resultado = numero1 / parseFloat(value); break;
-            case "*": resultado = numero1 * parseFloat(value); break;
-            case "%": resultado = numero1 % parseFloat(value); break;
-        }
-        return resultado;
-    }
-}
-var fncReset = () => {
-    cajaTexto.value = "0";
-    numero1 = -1;
-}
-var fncResultado = () => {
-    if (numero1 != -1) {
-        cajaTexto.value = fncOperacion();
-        numero1 = -1;
-    }
-}
 
 var escribir = (evento) => {
     let elemento = evento.srcElement;
     if (isNaN(cajaTexto.value)&&(cajaTexto!="-"&&isNaN(elemento.value)))
         cajaTexto.value = "0";
-    if (elemento.value == "ac")
-        fncReset();
-    else if (elemento.value >= 0 && elemento.value <= 9) {
+    if (elemento.value == "ac"){
+        operacion.fncReset();
+        cajaTexto.value = "0";
+    }else if (elemento.value >= 0 && elemento.value <= 9) {
         if (cajaTexto.value == "0" || reset) {
             cajaTexto.value = "";
             reset = false;
@@ -52,14 +62,17 @@ var escribir = (evento) => {
         cajaTexto.value = "-";
         reset = false;
     }else {
-        if (parseFloat(cajaTexto.value) > 0 || parseFloat(cajaTexto.value) < 0) {
-            if (elemento.value == "+-")
-                cajaTexto.value = -1 * (parseFloat(cajaTexto.value));
-            else if (elemento.value != "=" && elemento.value != "+-") {
-                operacion = elemento.value;
-                fncOperacion();
+        if ((parseFloat(cajaTexto.value) > 0 || parseFloat(cajaTexto.value) < 0)) {
+            if (elemento.value == "+-"){
+                operacion.numero1=parseFloat(cajaTexto.value);
+                operacion.operacion = elemento.value;
+                cajaTexto.value = operacion.fncResultado(0);
+            }else if (elemento.value != "=" && elemento.value != "+-") {
+                operacion.operacion = elemento.value;
+                operacion.fncOperacion(parseFloat(cajaTexto.value));
+                reset=true;
             } else
-                fncResultado();
+            cajaTexto.value = operacion.fncResultado(parseFloat(cajaTexto.value));
         }
     }
 }
