@@ -32,14 +32,12 @@ var escribir = (evento) => {
                 operacion.numero1=cajaNumero;
                 operacion.operacion = elemento.value;
                 cajaTexto.value = operacion.fncResultado(0);
-                operacion.fncReset();
             }else if (elemento.value != "=" && elemento.value != "+-") {
                 if(operacion.numero1==-1){
                     operacion.operacion = elemento.value;
                     operacion.fncOperacion(cajaNumero);
                 }else{
                     cajaTexto.value = operacion.fncResultado(cajaNumero);
-                    operacion.fncReset();
                     operacion.operacion = elemento.value;
                     operacion.numero1=parseFloat(cajaTexto.value);
                 }
