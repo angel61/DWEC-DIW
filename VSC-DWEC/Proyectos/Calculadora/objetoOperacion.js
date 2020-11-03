@@ -6,30 +6,31 @@ export class Operacion {
     constructor() {
     }
     fncOperacion = (numero) => {
-        if (numero1 == -1) {
-            numero1 = numero;
+        if (this.numero1 == -1) {
+            this.numero1 = numero;
         } else{
-            numero2 = numero;
-            switch (operacion) {
-                case "+": resultado = numero1 + numero2; break;
-                case "-": resultado = numero1 - numero2; break;
-                case "/": resultado = numero1 / numero2; break;
-                case "*": resultado = numero1 * numero2; break;
-                case "%": resultado = numero1 % numero2; break;
-                case "+-": resultado = -1 * (numero1); break;
+            this.numero2 = numero;
+            switch (this.operacion) {
+                case "+": this.resultado = this.numero1 + this.numero2; break;
+                case "-": this.resultado = this.numero1 - this.numero2; break;
+                case "/": this.resultado = this.numero1 / this.numero2; break;
+                case "*": this.resultado = this.numero1 * this.numero2; break;
+                case "%": this.resultado = this.numero1 % this.numero2; break;
+                case "+-": this.resultado = -1 * (this.numero1); break;
             }
-            return resultado;
+            return this.resultado;
         }
     }
     fncReset = () => {
-        numero1 = -1;
-        numero2 = -1;
-        operacion="";
-        resultado=-1;
+        this.numero1 = -1;
+        this.numero2 = -1;
+        this.operacion="";
     }
     fncResultado = (numero) => {
-        if (numero1 != -1) {
-            return fncOperacion(numero);
+        if (this.numero1 != -1) {
+            this.fncOperacion(numero);
+            this.fncReset();
+            return this.resultado;
         }
     }
 

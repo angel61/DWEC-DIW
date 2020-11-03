@@ -4,8 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Angel</title>
-    <link rel="stylesheet" href="calculadora.css">
+    <title>prueba Angel</title>
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculadora {
+            margin: auto;
+            padding: 0.25em 0em;
+            display: flex;
+            flex-flow: wrap row;
+            justify-content: center;
+            align-content: space-around;
+            background-color: rgb(221, 221, 221);
+            border: 1px solid grey;
+            border-radius: 0.5em;
+            width: 30em;
+        }
+
+        #cajaTexto {
+            margin: 0.25em 0em;
+            padding-right: 2%;
+            width: 88%;
+            height: 2em;
+            font-size: 2em;
+            text-align: right;
+            border-radius: 0.25em;
+            border: 1px solid grey;
+        }
+
+        .teclas {
+            margin: 0.5em 0em;
+            display: flex;
+            flex-flow: wrap row;
+            justify-content: center;
+            width: 90%;
+            height: 20em;
+        }
+
+        .teclas button {
+            box-sizing: border-box;
+            margin: 3px;
+            width: calc(25% - 6px);
+            height: calc(20% - 6px);
+            font-size: 150%;
+            border: none;
+            outline: none;
+            border-radius: 0.25em;
+        }
+
+        .teclas button:active {
+            border: none;
+            outline: none;
+            background-color: rgb(196, 196, 196);
+        }
+    </style>
+    <!--link rel="stylesheet" href=""-->
 </head>
 
 <body>
@@ -36,7 +95,7 @@
         </div>
     </div>
     </div>
-    <script type="module" src="calculadora.js"></script>
+    <script type="text/javascript" src="calculadora.js"></script>
 </body>
 
 </html>
