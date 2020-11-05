@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:.5em;
+        }
+        .formulario{
+            background-color: grey;
+            width: 40vw;
+            margin: 0 auto;
+        }
+        .form-row{
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+        }
+        .form-row>label{
+            flex: 1;
+        }
+        .form-row>input{
+            flex: 2;
+        }
+        .form-row>button{
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <form class="formulario">
+        <div class="form-row">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+        </div>
+        <div class="form-row">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad">
+        </div>
+        <div class="form-row">
+            <label for="email">Email</label>
+            <input type="text" id="email">
+        </div>
+        <div class="form-row">
+            <button>Boton</button>
+        </div>
+    </form>
+</body>
+</html>

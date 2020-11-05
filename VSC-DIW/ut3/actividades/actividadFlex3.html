@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .titulo {
+            background-color: rgb(65, 51, 35);
+            color: white;
+            margin: 0px;
+            padding: 1em;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-flow: row wrap;
+
+            padding: .5em;
+            background-color: transparent;
+        }
+
+        .card {
+            border: 1px solid black;
+            margin: .5em;
+            width: 15em;
+
+            display: flex;
+            flex-flow: row;
+
+        }
+
+        .card img {
+            border: 1px solid black;
+            width:30%;
+            flex: 1;
+        }
+
+        .texto {
+            flex: 2;
+        }
+
+        .texto h2 {
+            border: 1px solid black;
+            padding: .3em;
+            margin: 0em;
+            text-align: center;
+            background-color: grey;
+        }
+
+        .texto p {
+            border: 1px solid black;
+            padding: .3em;
+            margin: 0em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="titulo">Flexbox: Catálogo de imágenes y texto</h1>
+    <div class="contenedor">
+        <div class="card">
+            <img src="https://picsum.photos/id/684/600/400" alt="">
+            <div class="texto">
+                <h2>Titulo1</h2>
+                <p>Lorem ipsum dolor natus repellat rerum ipsa! Nobis unde repellat rerum ipsa! at harum nam dolore ea temporibus, dicta,
+                    deleniti distinctio facilis repellendus.</p>
+            </div>
+        </div>
+        <div class="card"><img src="https://picsum.photos/id/1076/600/400" alt="">
+            <div class="texto">
+                <h2>Titulo1</h2>
+                <p>Lorem ipsum dolor natus repellat rerum ipsa! Nobis unde repellat rerum ipsa! at harum nam dolore ea temporibus, dicta,
+                    deleniti distinctio facilis repellendus.</p>
+            </div>
+        </div>
+        <div class="card"><img src="https://picsum.photos/id/1081/600/400" alt="">
+            <div class="texto">
+                <h2>Titulo1</h2>
+                <p>Lorem ipsum dolor natus repellat rerum ipsa! Nobis unde repellat rerum ipsa! at harum nam dolore ea temporibus, dicta,
+                    deleniti distinctio facilis repellendus.</p>
+            </div>
+        </div>
+        <div class="card"><img src="https://picsum.photos/id/743/600/400" alt="">
+            <div class="texto">
+                <h2>Titulo1</h2>
+                <p>Lorem ipsum dolor natus repellat rerum ipsa! Nobis unde repellat rerum ipsa! at harum nam dolore ea temporibus, dicta,
+                    deleniti distinctio facilis repellendus.</p>
+            </div>
+        </div>
+        <div class="card"><img src="https://picsum.photos/id/945/600/400" alt="">
+            <div class="texto">
+                <h2>Titulo1</h2>
+                <p>Lorem ipsum dolor natus repellat rerum ipsa! Nobis unde repellat rerum ipsa! at harum nam dolore ea temporibus, dicta,
+                    deleniti distinctio facilis repellendus.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
