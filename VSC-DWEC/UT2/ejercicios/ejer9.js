@@ -1,9 +1,6 @@
 var miArray = ["H", "o", "l", "a", " ", "m", "u", "n", "d", "o"];
-var texto="";
-for(var i of miArray){
-    texto+=i;
-}
-console.log(texto);
+
+console.log(miArray.join(""));
 
 var texto="";
 for(var i of miArray){
