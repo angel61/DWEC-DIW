@@ -1,12 +1,12 @@
 export class Operacion {
-    numero1 = -1;
-    numero2 = -1;
+    numero1 = undefined;
+    numero2 = undefined;
     operacion="";
-    resultado=-1;
+    resultado=undefined;
     constructor() {
     }
     fncOperacion = (numero) => {
-        if (this.numero1 == -1) {
+        if (this.numero1 == undefined) {
             this.numero1 = numero;
         } else{
             this.numero2 = numero;
@@ -22,12 +22,12 @@ export class Operacion {
         }
     }
     fncReset = () => {
-        this.numero1 = -1;
-        this.numero2 = -1;
+        this.numero1 = undefined;
+        this.numero2 = undefined;
         this.operacion="";
     }
     fncResultado = (numero) => {
-        if (this.numero1 != -1) {
+        if (this.numero1 != undefined) {
             this.fncOperacion(numero);
             this.fncReset();
             return this.resultado;

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .forma{
+            margin: 30px;
+        }
+        .cuadrado{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+        .triangulo{
+            width: 0;
+            height: 0;
+            border-left: 100px solid black;
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+        }
+        .triangulo-2{
+            width: 0;
+            height: 0;
+            border-top: 100px solid black;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+        .triangulo-equi{
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid black;
+            border-left: 50px solid black;
+            border-right: 50px solid transparent;
+        }
+        .trapecio{
+            width: 80px;
+            height: 0;
+            border-bottom: 100px solid black;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+        .circulo{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 100%;
+        }
+        .obalo{
+            width: 200px;
+            height: 100px;
+            background-color: black;
+            border-radius: 100%;
+        }
+
+        .bordegr{
+            width: 100px;
+            height: 100px;
+            border: 10px solid;
+            border-image-source: linear-gradient(45deg,yellow,green);
+            border-image-slice: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="forma">
+            <h3>Cuadrado</h3>
+            <div class="cuadrado"></div>
+        </div>
+        <div class="forma">
+            <h3>Triangulo</h3>
+            <div class="triangulo"></div>
+        </div>
+        <div class="forma">
+            <h3>Triangulo 2</h3>
+            <div class="triangulo-2"></div>
+        </div>
+        <div class="forma">
+            <h3>Triangulo equi</h3>
+            <div class="triangulo-equi"></div>
+        </div>
+        <div class="forma">
+            <h3>Trapecio</h3>
+            <div class="trapecio"></div>
+        </div>
+        <div class="forma">
+            <h3>Circulo</h3>
+            <div class="circulo"></div>
+        </div>
+        <div class="forma">
+            <h3>Obalo</h3>
+            <div class="obalo"></div>
+        </div>
+        <div class="forma">
+            <h3>Borde gradiente</h3>
+            <div class="bordegr"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -20,7 +20,7 @@ var escribir = (evento) => {
         if (cajaTexto.value.length <= 10)
             cajaTexto.value += elemento.value;
     } else if (elemento.value == ".") {
-        if (cajaTexto.value.length < 8 && cajaTexto.value.length > 0 && cajaTexto.value.indexOf(".") == -1)
+        if (cajaTexto.value.length < 8 && cajaTexto.value.length > 0 && cajaTexto.value.indexOf(".") == undefined)
             cajaTexto.value += elemento.value;
     } else if (elemento.value == "-" && (cajaTexto.value == "0" || reset)){
         cajaTexto.value = "-";
@@ -33,7 +33,7 @@ var escribir = (evento) => {
                 operacion.operacion = elemento.value;
                 cajaTexto.value = operacion.fncResultado(0);
             }else if (elemento.value != "=" && elemento.value != "+-") {
-                if(operacion.numero1==-1){
+                if(operacion.numero1==undefined){
                     operacion.operacion = elemento.value;
                     operacion.fncOperacion(cajaNumero);
                 }else{
@@ -42,7 +42,7 @@ var escribir = (evento) => {
                     operacion.numero1=parseFloat(cajaTexto.value);
                 }
                 reset=true;
-            } else if(operacion.numero1!=-1&&!reset)
+            } else if(operacion.numero1!=-undefined&&!reset)
                 cajaTexto.value = operacion.fncResultado(cajaNumero);
         }
     }

@@ -1,32 +1,44 @@
 var texto=""
-var num=5;
+var n=5;
 var array=[]
-for(var i=0;i<num;i++){
-    array[i]=[]
-    for(var u=0;u<num;u++){
-        if(i==0){
-            texto+=(u+1)+" ";
-            array[i][u]=u+1;
-        }else if(i==(num-1)){
-            texto+=(((num*2)-1)+u)+" ";
-            array[i][u]=((num*2)-1)+u;
-        }else{
-            if(u==0){
-                texto+=num+i;
-                array[i][u]=(num+i);
-            }else if(u==(num-1)){
-                texto+=(num+((num-1)*2)+(num-2))-(i-1);
-                array[i][u]=(num+((num-1)*2)+(num-2))-(i-1);
-            }else{
-                texto+=" ";
-                array[i][u]="";
+for(var fila=0;fila<n;fila++){
+    array[fila]=[]
+    for(var col=0;col<n;col++){
+        //Si es la primera fila
+        if(fila==0){
+            //El valor de cada columna seria la posicion de la columna
+            array[fila][col]=col+1;
+
+
+        }
+        
+        //Si es la ultima fila
+        if(fila==(n-1)){
+            //El valor de cada columna seria n * 2 - 1 mas la posicion de la columna 
+            array[fila][col]=((n*2)-1)+col;
+        }
+
+        //Si no es ni la primera o la ultima fila
+        if(!(fila==0)&&!(fila==(n-1))){
+            //Y si se encuentra en la primera columna
+            if(col==0){
+                /*El valor de cada columna seria n mas la posicion 
+                de la fila en la que nos encontramos*/
+                array[fila][col]=(n+fila);
+            } 
+            
+            //Y si se encuentra en la ultima columna
+            if(col==(n-1)){
+                //El valor de cada columna seria (n + ((n - 1) * 2) - (fila - 1)
+                array[fila][col]=(n+((n-1)*2)+(n-2))-(fila-1);
+            }
+            
+            if(!(col==0)&&!(col==(n-1))){
+                array[fila][col]="";
             }
         }
     }
-    texto+="\n";
 }
-//console.log(texto);
-//console.log(array);
-for (let algo of array) {
-    console.log(algo);
+for (let linea of array) {
+    console.log(linea);
 }
