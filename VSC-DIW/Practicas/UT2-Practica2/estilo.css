@@ -10,9 +10,12 @@ body {
     color: #333;
 }
 
-a {
+.a-contenido a {
     color: #0070c9;
     text-decoration: none;
+}
+.a-contenido a:hover {
+    text-decoration: underline;
 }
 
 .a-contenido {
@@ -58,9 +61,14 @@ a {
     outline: none;
 }
 
+.a-busqueda-contenido>input:focus {
+    border: 1px darkgray solid;
+}
+
 .a-tipo-dispositivos {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 4em;
     padding: 3em 0;
     display: flex;
     flex-flow: row wrap;
@@ -83,14 +91,43 @@ a {
     font-weight: medium;
 }
 
-.a-tipo>a:hover {
-    text-decoration: underline;
-}
-
 .a-tipo>a>img {
     margin-bottom: .7em;
 }
 
+.a-opciones-recomendadas{
+    height: 13em;
+    width: 100%;
+    padding:3em;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-content: center;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.a-opcion{
+    width: 20em;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    padding: 0 2em;
+}
+.a-opcion a{
+    width: 80%;
+    text-align: center;
+    column-gap: .5em;
+}
+.a-opcion img{
+    margin: 0 auto;
+    margin-bottom: .7em;
+}
+
+/*
+Moviles
+*/
 @media screen and (max-width:560px) {
     .a-busqueda {
         height: 60vh;
@@ -109,6 +146,38 @@ a {
     }
 }
 
+/*
+Tables y moviles
+*/
+@media screen and (max-width:1027px) {
+
+    .a-opciones-recomendadas{
+        flex-direction: column;
+        height: 27em;
+    }
+    .a-opcion:nth-child(even){
+        border-top: 1px solid gainsboro;
+        border-bottom: 1px solid gainsboro;
+    }
+
+    .a-opcion{
+        width: 100%;
+        padding: 2em;
+    }
+}
+
+/*
+Tablets
+*/
+@media screen and (min-width:560px) and (max-width:1027px) {
+    .a-tipo {
+        width: 30%;
+    }
+}
+
+/*
+Tables y ordenadorees
+*/
 @media screen and (min-width:560px) {
     .a-busqueda-contenido {
         position: absolute;
@@ -121,14 +190,18 @@ a {
     }
 }
 
-@media screen and (min-width:560px) and (max-width:1027px) {
-    .a-tipo {
-        width: 30%;
-    }
-}
-
+/*
+Ordenadores
+*/
 @media screen and (min-width:1027px) {
     .a-tipo-dispositivos {
         width: 60em;
     }
+    
+.a-opcion:nth-child(even){
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-top: 0px solid gainsboro;
+    border-bottom: 0px solid gainsboro;
+}
 }
