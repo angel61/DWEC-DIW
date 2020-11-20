@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Navegacion */
+.m-container-nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.m-container-nav a {
+    padding: 14px 30px;
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+}
+
+.m-container-nav a:hover {
+    color: #FFF;
+}
+
+.m-container-nav .m-logo-apple {
+    padding: 0;
+}
+
+@media screen and (max-width: 560px) {
+    .m-container-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Finla Navegacion */

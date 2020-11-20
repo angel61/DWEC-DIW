@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+a {
+    color: #0070c9;
+    text-decoration: none;
+}
+
+.a-contenido {
+    width: 100%;
+}
+
+.a-busqueda {
+    width: 100%;
+    height: 85vh;
+}
+
+.a-busqueda-fondo {
+    background-image: url("img/fondo-busqueda.jpg");
+    background-position: center 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.a-busqueda-contenido {
+    min-height: 7em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    row-gap: 1em;
+}
+
+.a-busqueda-contenido>h1 {
+    font-weight: black;
+    font-size: 300%;
+}
+
+.a-busqueda-contenido>input {
+    height: 2em;
+    padding: 1em;
+    font-size: 1.5em;
+    border: 1px gainsboro solid;
+    border-radius: 3px;
+    outline: none;
+}
+
+.a-tipo-dispositivos {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3em 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    row-gap: 3em;
+}
+
+.a-tipo {
+    width: 5em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.a-tipo>a {
+    text-align: center;
+    color: #333;
+    font-weight: medium;
+}
+
+.a-tipo>a:hover {
+    text-decoration: underline;
+}
+
+.a-tipo>a>img {
+    margin-bottom: .7em;
+}
+
+@media screen and (max-width:560px) {
+    .a-busqueda {
+        height: 60vh;
+    }
+    .a-busqueda-fondo {
+        height: 55%;
+    }
+    .a-busqueda-contenido {
+        padding: 2em 1.5em;
+    }
+    .a-busqueda-contenido>h1 {
+        font-size: 170%;
+    }
+    .a-tipo {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width:560px) {
+    .a-busqueda-contenido {
+        position: absolute;
+        top: 7em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 55%;
+        height: 40%;
+    }
+}
+
+@media screen and (min-width:560px) and (max-width:1027px) {
+    .a-tipo {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:1027px) {
+    .a-tipo-dispositivos {
+        width: 60em;
+    }
+}

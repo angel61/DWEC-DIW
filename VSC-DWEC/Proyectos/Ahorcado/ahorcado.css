@@ -2,7 +2,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
-    background: linear-gradient(to bottom right, rgb(37, 37, 37), rgb(209, 209, 209)) no-repeat;
+    background-image: radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,1) 0%, rgba(95,209,249,1) 100.2% );
     background-size: cover;
     height:97.5vh;
     display: flex;
@@ -26,12 +26,32 @@ img{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.342);
 }
 #resultado{   
+    position: absolute;
     top: 50%;
-    transform: translate(0%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding:1em;
     color: white;
     border: 0px;
-    border-radius: 1em;
+    border-radius: .5em;
     
     font-size:4em;
+}
+
+#resolver{   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:1em;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: .5em;
+    width: 55%;
+
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    row-gap: 1em;
+    column-gap: 1em;
 }
