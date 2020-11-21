@@ -14,6 +14,7 @@ body {
     color: #0070c9;
     text-decoration: none;
 }
+
 .a-contenido a:hover {
     text-decoration: underline;
 }
@@ -56,13 +57,13 @@ body {
     height: 2em;
     padding: 1em;
     font-size: 1.5em;
-    border: 1px gainsboro solid;
+    border: 1px rgb(220, 220, 220) solid;
     border-radius: 3px;
     outline: none;
 }
 
 .a-busqueda-contenido>input:focus {
-    border: 1px darkgray solid;
+    border: 1px rgb(169, 169, 169) solid;
 }
 
 .a-tipo-dispositivos {
@@ -92,42 +93,93 @@ body {
 }
 
 .a-tipo>a>img {
+    width: 68px;
+    height: 68px;
     margin-bottom: .7em;
 }
 
-.a-opciones-recomendadas{
+.a-opciones-recomendadas {
     height: 13em;
     width: 100%;
-    padding:3em;
-
+    padding: 3em;
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-content: center;
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid gainsboro;
+    border-top: 1px solid rgb(220, 220, 220);
+    border-bottom: 1px solid rgb(220, 220, 220);
 }
 
-.a-opcion{
+.a-opcion {
     width: 20em;
     display: flex;
     flex-flow: row;
     justify-content: center;
     padding: 0 2em;
 }
-.a-opcion a{
+
+.a-opcion a {
     width: 80%;
     text-align: center;
     column-gap: .5em;
 }
-.a-opcion img{
+
+.a-opcion img {
+    width: 40px;
+    height: 40px;
     margin: 0 auto;
     margin-bottom: .7em;
+}
+
+.a-apartado:nth-child(even){
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.a-actualizar-ios{
+    flex-flow: row;
+}
+    .a-renueva{
+        flex-flow: row-reverse;
+    }
+    .a-renueva,
+        .a-actualizar-ios{
+    width: 90%;
+    margin: 0 auto;
+    padding: 2.7em 5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.a-renueva-texto,
+.a-actualizar-texto{
+    font-size: 1.3em;
+    width: 40%;
+}
+.a-renueva-texto h1,
+.a-actualizar-texto h1{
+    font-weight: bolder;
+    font-size: 1.6em;
+    margin-bottom: .5em;
+}
+.a-renueva-texto p,
+.a-actualizar-texto p{
+    line-height: 1.4em;
+    word-spacing: .1em;
+}
+.a-renueva-imagen,
+.a-actualizar-imagen{
+    width: 40%;
+}
+.a-renueva-imagen img,
+.a-actualizar-imagen img{
+    width: 400px;
+    max-width: 100%;
 }
 
 /*
 Moviles
 */
+
 @media screen and (max-width:560px) {
     .a-busqueda {
         height: 60vh;
@@ -149,26 +201,48 @@ Moviles
 /*
 Tables y moviles
 */
-@media screen and (max-width:1027px) {
 
-    .a-opciones-recomendadas{
+@media screen and (max-width:1027px) {
+    .a-opciones-recomendadas {
         flex-direction: column;
         height: 27em;
     }
-    .a-opcion:nth-child(even){
-        border-top: 1px solid gainsboro;
-        border-bottom: 1px solid gainsboro;
+    .a-opcion:nth-child(even) {
+        border-top: 1px solid rgb(220, 220, 220);
+        border-bottom: 1px solid rgb(220, 220, 220);
     }
-
-    .a-opcion{
+    .a-opcion {
         width: 100%;
         padding: 2em;
+    }
+    
+    .a-renueva,
+    .a-actualizar-ios{
+        flex-flow: column-reverse;
+        width: 100%;
+        row-gap: 1.6em;
+    }
+    .a-renueva-imagen,
+    .a-actualizar-imagen{
+        width: 25em;
+        margin: 0 auto;
+    }
+    .a-renueva-texto,
+    .a-actualizar-texto{
+        width: 100%;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .a-renueva-texto h1,
+    .a-actualizar-texto h1{
+        font-size: 1.6em;
     }
 }
 
 /*
 Tablets
 */
+
 @media screen and (min-width:560px) and (max-width:1027px) {
     .a-tipo {
         width: 30%;
@@ -178,6 +252,7 @@ Tablets
 /*
 Tables y ordenadorees
 */
+
 @media screen and (min-width:560px) {
     .a-busqueda-contenido {
         position: absolute;
@@ -193,15 +268,15 @@ Tables y ordenadorees
 /*
 Ordenadores
 */
+
 @media screen and (min-width:1027px) {
     .a-tipo-dispositivos {
         width: 60em;
     }
-    
-.a-opcion:nth-child(even){
-    border-left: 1px solid gainsboro;
-    border-right: 1px solid gainsboro;
-    border-top: 0px solid gainsboro;
-    border-bottom: 0px solid gainsboro;
-}
+    .a-opcion:nth-child(even) {
+        border-left: 1px solid rgb(220, 220, 220);
+        border-right: 1px solid rgb(220, 220, 220);
+        border-top: 0px solid rgb(220, 220, 220);
+        border-bottom: 0px solid rgb(220, 220, 220);
+    }
 }
