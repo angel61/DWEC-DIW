@@ -55,3 +55,7 @@ img{
     row-gap: 1em;
     column-gap: 1em;
 }
+
+.letra-usada{
+    display: none;
+}

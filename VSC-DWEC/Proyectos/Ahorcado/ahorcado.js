@@ -36,6 +36,7 @@ Funcion utilizada para comprobar que la letra no fue usada, comprobar si esta se
 y mostrar el resultado en la etiqueta de la palabra oculta
 */
 var annadirLetra = (letra) => {
+    let letraUsadaH1 = document.getElementsByClassName("letra-usada")[0];
     if (letraUsada(letra)) {
         let posicion = strAdivinar.indexOf(letra);
         if (posicion != -1)
@@ -47,8 +48,9 @@ var annadirLetra = (letra) => {
             posicion = strAdivinar.indexOf(letra, posicion + 1);
             strPantalla[posicion] = letra;
         }
+        letraUsadaH1.style.display="none";
     } else {
-        alert("La letra ya fue escrita anteriormente.");
+        letraUsadaH1.style.display="inline";
     }
 
     txtPantalla.innerHTML = strPantalla.join(" ");
