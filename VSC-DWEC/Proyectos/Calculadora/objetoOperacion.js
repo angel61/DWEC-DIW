@@ -1,14 +1,16 @@
 export class Operacion {
     numero1 = undefined;
     numero2 = undefined;
-    operacion="";
-    resultado=undefined;
+    operacion = "";
+    resultado = undefined;
     constructor() {
     }
+
+    //Funcion que realiza la operacion
     fncOperacion = (numero) => {
         if (this.numero1 == undefined) {
             this.numero1 = numero;
-        } else{
+        } else {
             this.numero2 = numero;
             switch (this.operacion) {
                 case "+": this.resultado = this.numero1 + this.numero2; break;
@@ -21,11 +23,15 @@ export class Operacion {
             return this.resultado;
         }
     }
+
+    //Funcion que reinicia los valores del objeto
     fncReset = () => {
         this.numero1 = undefined;
         this.numero2 = undefined;
-        this.operacion="";
+        this.operacion = "";
     }
+
+    //Funcion que termina la operacion
     fncResultado = (numero) => {
         if (this.numero1 != undefined) {
             this.fncOperacion(numero);

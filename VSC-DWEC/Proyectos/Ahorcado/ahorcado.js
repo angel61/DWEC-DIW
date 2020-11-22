@@ -57,7 +57,6 @@ var annadirLetra = (letra) => {
 
 var txtAdivinar = document.getElementById("txtAdivinar");
 var btnAdivinar = document.getElementById("btnAdivinar");
-
 /*
 Esta funcion es utilizada para terminar el juego 
 y mostrar el resultado de la partida en un div vacio
