@@ -18,7 +18,7 @@ export class Operacion {
                 case "/": this.resultado = this.numero1 / this.numero2; break;
                 case "*": this.resultado = this.numero1 * this.numero2; break;
                 case "%": this.resultado = this.numero1 % this.numero2; break;
-                case "+-": this.resultado = -1 * (this.numero1); break;
+                case "+/-": this.resultado = -1 * (this.numero1); break;
             }
             return this.resultado;
         }
