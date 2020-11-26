@@ -78,11 +78,11 @@ var escribir = (evento) => {
             case "+/-":
             case "√":
             case "x!":
-                case "ln":
-                    case "log":
-                        case "cos":
-                            case "tan":
-                                case "sin":
+            case "ln":
+            case "log":
+            case "cos":
+            case "tan":
+            case "sin":
                 strOperacion = `${elemento.value} (${cajaNumero}) =`
                 operacion.numero1 = cajaNumero;
                 operacion.operacion = elemento.value;
