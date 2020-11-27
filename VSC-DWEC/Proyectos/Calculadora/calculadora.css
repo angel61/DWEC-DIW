@@ -78,9 +78,10 @@
 
         .historial{
             height: 100vh;
-            min-width: 15em;
+            width: 15em;
+            max-width: 30em;
             padding: 1em;
             background-color: rgb(233, 233, 233);
             border-left: 1px solid rgb(140, 140, 140);
-            overflow-y: scroll;
+            overflow: scroll;
         }

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        .grid-container {
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+
+            background-color: black;
+            display: grid;
+            grid-template-columns: 2fr 2fr 5fr 4fr 1fr 1fr 2fr 2fr;
+            grid-template-rows: 4fr 1fr 5fr 4fr 2fr 2fr 1fr 2fr 4fr 2fr 2fr;
+            grid-template-areas: "elem01 elem01 elem02 elem03 elem03 elem04 elem04 elem04"
+                                 "elem05 elem05 elem02 elem03 elem03 elem04 elem04 elem04"
+                                 "elem05 elem05 elem02 elem06 elem06 elem06 elem06 elem06"
+                                 "elem05 elem05 elem07 elem07 elem08 elem08 elem09 elem09"
+                                 "elem05 elem05 elem10 elem10 elem08 elem08 elem09 elem09"
+                                 "elem11 elem11 elem10 elem10 elem08 elem08 elem09 elem09"
+                                 "elem11 elem11 elem10 elem10 elem08 elem08 elem12 elem12"
+                                 "elem13 elem13 elem10 elem10 elem08 elem08 elem12 elem12"
+                                 "elem13 elem13 elem14 elem15 elem15 elem15 elem15 elem15"
+                                 "elem16 elem17 elem14 elem15 elem15 elem15 elem15 elem15"
+                                 "elem16 elem17 elem14 elem18 elem18 elem18 elem18 elem19";
+            gap: 10px;
+        }
+
+        .grid-element {
+            background-color: white;
+        }
+
+        .elem1,.elem14{
+            background-color: rgb(180, 9, 9);
+        }
+        .elem3,.elem11{
+            background-color: rgb(255, 251, 0);
+        }
+        .elem10,.elem19{
+            background-color: rgb(27, 72, 194);
+        }
+
+
+        .elem1{
+            grid-area: elem01;
+        }
+        .elem2{
+            grid-area: elem02;
+        }
+        .elem3{
+            grid-area: elem03;
+        }
+        .elem4{
+            grid-area: elem04;
+        }
+        .elem5{
+            grid-area: elem05;
+        }
+        .elem6{
+            grid-area: elem06;
+        }
+        .elem7{
+            grid-area: elem07;
+        }
+        .elem8{
+            grid-area: elem08;
+        }
+        .elem9{
+            grid-area: elem09;
+        }
+        .elem10{
+            grid-area: elem10;
+        }
+        .elem11{
+            grid-area: elem11;
+        }
+        .elem12{
+            grid-area: elem12;
+        }
+        .elem13{
+            grid-area: elem13;
+        }
+        .elem14{
+            grid-area: elem14;
+        }
+        .elem15{
+            grid-area: elem15;
+        }
+        .elem16{
+            grid-area: elem16;
+        }
+        .elem17{
+            grid-area: elem17;
+        }
+        .elem18{
+            grid-area: elem18;
+        }
+        .elem19{
+            grid-area: elem19;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-element elem1"></div>
+        <div class="grid-element elem2"></div>
+        <div class="grid-element elem3"></div>
+        <div class="grid-element elem4"></div>
+        <div class="grid-element elem5"></div>
+        <div class="grid-element elem6"></div>
+        <div class="grid-element elem7"></div>
+        <div class="grid-element elem8"></div>
+        <div class="grid-element elem9"></div>
+        <div class="grid-element elem10"></div>
+        <div class="grid-element elem11"></div>
+        <div class="grid-element elem12"></div>
+        <div class="grid-element elem13"></div>
+        <div class="grid-element elem14"></div>
+        <div class="grid-element elem15"></div>
+        <div class="grid-element elem16"></div>
+        <div class="grid-element elem17"></div>
+        <div class="grid-element elem18"></div>
+        <div class="grid-element elem19"></div>
+    </div>
+</body>
+
+</html>
