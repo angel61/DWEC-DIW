@@ -1,0 +1,130 @@
+@import url('../Recursos/fonts/fontTitulo3.ttf');
+@font-face {
+    font-family: fontTitulo3;
+    src: url(../Recursos/fonts/fontTitulo3.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-grid {
+    background-color: gainsboro;
+    width: 100%;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 19vw);
+    grid-template-areas: "grid01 grid02 grid03 grid04 grid05" "grid01 grid06 grid07 grid04 grid08" "grid09 grid09 grid10 grid10 grid11" "grid09 grid09 grid12 grid12 grid13";
+    gap: 1em;
+}
+
+.grid-fondo {
+    background-size: cover;
+    background-position: center;
+}
+.grid-fondo:hover {
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.grid-texto {
+    padding: 1em;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+.grid-texto>p {
+    font-style: italic;
+}
+
+.grid-texto>div {
+    font-weight: bold;
+}
+
+.grid-titulo {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+.grid-titulo>h1 {
+    width: 100%;
+    text-align: center;
+    font-family: fontTitulo3;
+    font-size: 3.5em;
+}
+
+.grid01 {
+    grid-area: grid01;
+    background-image: url(../Recursos/imagenes/bloque3-img1.jpg);
+}
+
+.grid02 {
+    grid-area: grid02;
+    background-image: url(../Recursos/imagenes/bloque3-img2.jpg);
+}
+
+.grid03 {
+    grid-area: grid03;
+}
+
+.grid04 {
+    grid-area: grid04;
+    background-image: url(../Recursos/imagenes/bloque3-img3.jpg);
+}
+
+.grid05 {
+    grid-area: grid05;
+    background-image: url(../Recursos/imagenes/bloque3-img4.jpg);
+}
+
+.grid06 {
+    grid-area: grid06;
+}
+
+.grid07 {
+    grid-area: grid07;
+    background-image: url(../Recursos/imagenes/bloque3-img5.jpg);
+}
+
+.grid08 {
+    grid-area: grid08;
+    background-image: url(../Recursos/imagenes/bloque3-img6.jpg);
+}
+
+.grid09 {
+    grid-area: grid09;
+    background-image: url(../Recursos/imagenes/bloque3-img7.jpg);
+}
+
+.grid10 {
+    grid-area: grid10;
+}
+
+.grid11 {
+    grid-area: grid11;
+}
+
+.grid12 {
+    grid-area: grid12;
+    background-image: url(../Recursos/imagenes/bloque3-img8.jpg);
+}
+
+.grid13 {
+    grid-area: grid13;
+    background-image: url(../Recursos/imagenes/bloque3-img9.jpg);
+}
+
+@media screen and (max-width:800px) {
+    .contenedor-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 25vw);
+        grid-template-areas: "grid01 grid02 grid03" "grid01 grid05 grid06" "grid04 grid07 grid09" "grid04 grid08 grid09" " grid10 grid10 grid11" " grid12 grid12 grid13";
+    }
+}

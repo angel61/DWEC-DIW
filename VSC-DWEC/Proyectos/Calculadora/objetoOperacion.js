@@ -212,10 +212,10 @@ export class Operacion {
     fncHistorial = (tipo) => {
         switch (tipo) {
             case "multi":
-                this.historial = `<h2>${this.numero1} ${this.operacion} ${this.consola} =</h2><h1>${this.resultado}</h1><br>`;
+                this.historial = `<h3>${this.numero1} ${this.operacion} ${this.consola} =</h3><h2>${this.resultado}</h2><br>`;
                 break;
             case "mono":
-                this.historial += `<h2>${this.operacion} (${this.consola}) =</h2><h1>${this.resultado}</h1><br>`;
+                this.historial += `<h3>${this.operacion} (${this.consola}) =</h3><h2>${this.resultado}</h2><br>`;
                 break;
         }
     }

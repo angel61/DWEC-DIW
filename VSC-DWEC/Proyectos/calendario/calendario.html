@@ -3,12 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title> 
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+        body{
+            height: 90vh;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            justify-content: center;
+        }
+        body>div{
+            border-radius: .4em;
+            width: 40em;
+            padding: 1em;
+            display: flex;
+            flex-flow: column wrap;
+            
+            gap: 1em;
+            background-color: gainsboro;
+            border: 1px solid gray;         
+        }
+        td{
+            background-color: whitesmoke;
+            border-radius: .2em;
+            padding: .5em 0;
+            margin: .7em;
+        }
+        #mostrarDia{
+            width:16em;
+            height: 2em;
+            padding: .3em 0;
+            border-radius: .2em;
+            background-color: whitesmoke;
+            align-self: center;
+            display: none;
+        }
+    </style>                                                                                                                                            
 </head>
 <body>
+    <div>
     <input type="date" id="fechaCalendario">
     <table id="calendarioMes"></table>
     <div id="mostrarDia"></div>
     <script type="text/javascript" src="calendario.js"></script>
+</div>
 </body>
 </html>

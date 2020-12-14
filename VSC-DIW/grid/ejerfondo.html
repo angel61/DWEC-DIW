@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: rgb(51, 51, 51);
+            margin: 0;
+        }
+
+        .fondo-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 90vh;
+            width: 100%;
+            z-index: -1;
+        }
+        .fondo-container img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .grid-container {
+            height: 90vh;
+            width: 50vw;
+            display: grid;
+            grid-template-rows: 10vh auto 10vh;
+            grid-template-columns: auto;
+            align-content: center;
+            justify-content: center;
+            padding: 10vw;
+        }
+
+        .item1 h1 {
+            letter-spacing: .2em;
+            font-size: 2.3em;
+                text-align: center;
+        }
+
+        .item2 p {
+            line-height: 150%;
+            font-size: 1em;
+        }
+
+        .item3 button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 1em;
+            font-size: 1em;
+        }
+
+        .item3 {
+            align-self: center;
+        }
+
+        @media screen and (max-width:650px) {
+            .fondo-container img {
+                width: auto;
+            }
+
+            .grid-container {
+                width: 100%;
+            }
+            .item3 {
+                justify-self: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fondo-container"><img src="aaa.jpg" alt=""></div>
+        <div class="grid-container">
+            <div class="grid-item item1">
+                <h1>STATE OF ART</h1>
+            </div>
+            <div class="grid-item item2">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ipsa id iusto corporis tempora
+                    labore perspiciatis quam fugiat sit possimus iste doloremque modi, error tempore dolores? Inventore
+                    aut natus pariatur!</p>
+            </div>
+            <div class="grid-item item3"><button>Take a look</button></div>
+
+
+        </div>
+</body>
+
+</html>

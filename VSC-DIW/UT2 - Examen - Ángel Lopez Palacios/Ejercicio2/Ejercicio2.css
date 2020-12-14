@@ -1,0 +1,94 @@
+@import url('../Recursos/fonts/fontTitulo2.ttf');
+@font-face {
+    font-family: fontTitulo2;
+    src: url(../Recursos/fonts/fontTitulo2.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: fontTitulo2;
+}
+
+h1 {
+    margin: 0;
+}
+
+.titulo-parrafo {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.linea-vertical {
+    height: 4em;
+    width: 1px;
+    background-color: #BFAD87;
+    align-self: center;
+}
+
+.contenedor {
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 1em;
+}
+
+.tarjetas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2em;
+}
+
+.tarjeta {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background-color: #BFAD87;
+    padding: 1em;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.tarjeta-contenido {}
+
+.imagen-tarjeta {
+    width: 100%;
+    align-self: center;
+    filter: sepia(100%);
+}
+
+.texto-tarjeta>p {
+    text-align: justify;
+}
+
+.icono {
+    width: 2em;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+@media screen and (max-width:800px) {
+    .contenedor {
+        height: auto;
+    }
+    .tarjetas {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #262323;
+            color: #A64F3C;
+        }
+        .grid-container {
+            width: 80vw;
+            height: 100vh;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 10vh 25vh 10vh;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .grid-element {
+            text-align: center;
+        }
+
+        .elem1 {
+            grid-column: 1/2;
+            grid-row: 1/4;
+        }
+
+        .elem1>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .elem2{
+            font-size: 1.5em;
+            font-family: 'Dancing Script', cursive;
+        }
+        .elem3{
+            text-align: justify;
+            padding: 1em;
+            font-size: 1.1em;
+        }
+        .elem4{
+            align-self: center;
+            justify-self: center;
+        }
+        .elem4>button{
+            padding: 1em;
+            color: #A64F3C;
+            border: 1px solid #A64F3C ;
+            border-radius: .5em;
+            background-color: transparent;
+        }
+        
+
+@media screen and (max-width:800px) {
+    .grid-container{
+            padding: 1em 0;
+        grid-template-columns: 1fr;
+            grid-template-rows: 10vh 20vh 10vh;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-element elem1"><img src="https://picsum.photos/id/684/600/400" alt=""></div>
+        <div class="grid-element elem2">
+            <h2>Titulo</h2>
+        </div>
+        <div class="grid-element elem3">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nulla maiores minima quam
+                exercitationem et, voluptas assumenda. Enim quae explicabo saepe non cumque qui ipsum numquam, officiis
+                esse adipisci unde.</p>
+        </div>
+        <div class="grid-element elem4"><button>Leer mas</button></div>
+    </div>
+</body>
+
+</html>

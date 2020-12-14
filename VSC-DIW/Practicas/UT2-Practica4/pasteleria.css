@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Soporte */
+
+body {
+    width: 100%;
+    background-color: #DFB27B;
+    color: #333;
+}
+
+
+/* Navegacion */
+.nav-container {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    min-height: 5em;
+    box-shadow: -2px -8px 11px 8px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: #d9bd9cb0;
+    position: fixed;
+    top: 0px;
+    z-index: 30;
+}
+
+.nav-container a {
+    margin: 0 1em;
+    padding: 1.7em 1em;
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+    border-bottom: 5px solid transparent;
+}
+
+.nav-container a:hover {
+    color: #FFF;
+    border-bottom: 5px solid #8C5B23;
+    background-color: #8C5B2325;
+}
+
+.nav-container {
+    padding: 0;
+}
+/* Fin navegacion */
+
+
+
+.contenido a {
+    color: #DFB27B;
+    text-decoration: none;
+}
+
+.contenido a:hover {
+    text-decoration: underline;
+}
+
+.contenido {
+    width: 100%;
+    font-family: 'Caveat', cursive;
+}
+
+.cabecera {
+    width: 100%;
+}
+
+.cabecera-fondo {
+    background-image: url("img/pasteleria.jpg");
+    background-position: center 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.cabecera-contenido {
+    position: absolute;
+    top: 40vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 15em;
+    min-height: 7em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.cabecera-contenido>h1 {
+    font-weight: black;
+    font-size: 300%;
+}
+
+.cabecera-contenido>input {
+    width: 7em;
+    height: 2em;
+    font-size: 2em;
+    font-weight: black;
+    font-family: 'Caveat', cursive;
+    color: #996526;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    align-self: center;
+    cursor: pointer;
+}
+
+.cabecera-contenido>input:hover {
+    text-decoration: underline;
+}
+
+.apartados {
+    padding: 2em 5em;
+    display: grid;
+    grid-template: repeat(2, 56vh) repeat(2, auto)/ 1fr;
+    justify-content: center;
+    gap: 2em;
+}
+
+.grid-apartados-elem1 {
+    grid-row: 1/2;
+}
+
+.grid-apartados-elem2 {
+    grid-row: 2/3;
+}
+
+.grid-apartados-elem3 {
+    background-color: white;
+    grid-row: 3/4;
+}
+
+.grid-apartados-elem4 {
+    background-color: white;
+    grid-row: 4/5;
+}
+
+.apartado-derecho {
+    flex-flow: row;
+}
+
+.apartado-reverso {
+    flex-flow: row-reverse;
+}
+
+.apartado-derecho, .apartado-reverso {
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #fff;
+}
+
+.apartado-texto {
+    font-size: 1.3em;
+    width: 50%;
+    padding: 2em;
+    align-self: center;
+}
+
+.apartado-texto h1 {
+    font-weight: bolder;
+    font-size: 1.6em;
+    margin-bottom: .5em;
+}
+
+.apartado-texto p {
+    line-height: 1.4em;
+    word-spacing: .1em;
+}
+
+.apartado-imagen {
+    height: auto;
+    width: 50%;
+}
+
+.apartado-imagen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*
+Tipos de productos
+*/
+
+.apartado-tipos {
+    padding: 2em;
+    display: grid;
+    grid-template: 5em repeat(2, 14em)/repeat(3, 1fr);
+    font-family: 'Poppins', sans-serif;
+    gap: 1em;
+}
+
+.tipos-titulo {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 3em;
+}
+
+.celda-grid-tipo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pastas {
+    background: url("img/pastas.jpg");
+}
+
+.tartas {
+    background: url("img/tartas.jpg");
+}
+
+.salados {
+    background: url("img/salado.jpg");
+}
+
+.bollos {
+    background: url("img/bollo.jpg");
+}
+
+.bombones {
+    background: url("img/bombones.jpg");
+}
+
+.dulces {
+    background: url("img/dulces.jpg");
+}
+
+.tipo {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s;
+}
+
+.tipo:hover {
+    transform: scale(1.1);
+}
+
+.tipo>a {
+    color: #fff;
+}
+
+.tipo>a:hover {
+    text-decoration: none;
+}
+
+.tipo-texto {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 2em;
+    transition: 0.5s;
+}
+
+.tipo-texto:hover {
+    padding-bottom: 3em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+
+.footer {
+    background-color: #D99036;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #fff;
+}
+
+.footer-contenedor {
+    width: 72%;
+    height: 100%;
+    margin: auto;
+}
+
+.redes {
+    padding: 2em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    row-gap: 1em;
+}
+
+.titulo-redes {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.links-redes {
+    width: 15em;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.links-redes a {
+    margin-right: 1em;
+}
+
+.links-redes>a>img {
+    width: 3em;
+    height: 3em;
+}
+
+.links-redes a:last-child {
+    margin: 0;
+}
+
+.coyright {
+    padding: 1em 0;
+    border-top: 0.5px solid #fff;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+.coyright>div {
+    display: inline-block;
+}
+
+/* Final Footer */
+
+/*
+Tablets
+*/
+
+@media screen and (max-width:1100px) {
+    .apartados {
+        grid-template: repeat(2, 80vh) repeat(2, auto)/ 1fr;
+        padding: 1em;
+    }
+}
+
+/*
+Moviles
+*/
+
+@media screen and (max-width:750px) {
+    
+    .nav-container {
+        flex-flow: column wrap;
+        text-align: center;
+        position: static;
+        top: 0;
+    }
+    .nav-container a {
+        width: 100%;
+        margin: 0;
+    }
+    .nav-container a:hover {
+        color: #FFF;
+        border-bottom: 5px solid transparent;
+        background-color: #40010125;
+    }
+
+    .cabecera {
+        height: auto;
+        gap: 5%;
+    }
+    .cabecera-fondo {
+        height: 33vh;
+        position: relative;
+        top: 0;
+    }
+    .cabecera-contenido {
+        width: 100vw;
+        height: auto;
+        padding: 2em 1.5em;
+        position: static;
+        background-color: #fff;
+    }
+    .cabecera-contenido>h1, .cabecera-contenido>input {
+        font-size: 170%;
+    }
+    .apartados {
+        grid-template: repeat(4, auto)/1fr;
+    }
+    .apartado-derecho, .apartado-reverso {
+        flex-flow: column-reverse;
+        padding: 10% 0;
+    }
+    .apartado-imagen {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .apartado-texto {
+        width: 100%;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .apartado-texto h1 {
+        font-size: 1.6em;
+    }
+    .tipos-titulo {
+        grid-column: 1/3;
+        font-size: 2em;
+    }
+    .apartado-tipos {
+        grid-template: 3em repeat(3, 10em)/1fr 1fr;
+    }
+    .tipo-texto>h2 {
+        font-size: 1em;
+    }
+    
+    .footer-contenedor {
+        width: 100%;
+    }
+    .a-coyright {
+        padding: 1em 2em;
+    }
+}
