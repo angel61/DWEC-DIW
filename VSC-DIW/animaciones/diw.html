@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-size: 2em;
+        }
+        ul{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-start;
+            list-style: none;
+            animation: diwanimacion1 2s ease-in-out;
+        }
+        li{
+            width: 0em;
+            text-align: center;
+            transition:all .5s ease-in-out;
+            opacity: 0;
+        }
+        .visible{
+            width: 1em;
+            opacity: 1;
+        }
+        ul:hover li{
+            width: 1em;
+            transition: 1s ease;
+            opacity: 1;
+        }
+        @keyframes diwanimacion1 {
+            0%{
+            margin-left: 100%;
+            }
+            100%{
+            margin-left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="visible">D</li>
+        <li>i</li>
+        <li>s</li>
+        <li>e</li>
+        <li>ñ</li>
+        <li>o</li>
+        <li> </li>
+        <li class="visible">I</li>
+        <li>n</li>
+        <li>t</li>
+        <li>e</li>
+        <li>r</li>
+        <li>f</li>
+        <li>a</li>
+        <li>c</li>
+        <li>e</li>
+        <li>s</li>
+        <li> </li>
+        <li class="visible">W</li>
+        <li>e</li>
+        <li>b</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 350px);
+            grid-template-rows: 350px;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .card {
+            position: relative;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+
+        .capa {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-content: center;
+            row-gap: 50px;
+            border-radius: 100%;
+        }
+
+        .capa1 {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: 100%;
+            height: 100%;
+            transform: scale(0);
+            overflow: hidden;
+
+            background-color: rgba(0, 0, 0, 0.514);
+
+            transition: 0.5s ease;
+        }
+
+        .borde {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            box-shadow: inset 0px 0px 0px 18px rgba(0, 0, 0, 0.5);
+            transition: 0.5s ease;
+        }
+
+        .texto {
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            transition: .5s ease;
+        }
+
+        .texto-oculto {
+            color: white;
+            text-align: center;
+            opacity: 0;
+            border-top: 1px solid white;
+            padding-top: 5px;
+            font-style: italic;
+            margin: 0 2em;
+
+            transition: .7s ease-in-out .5s;
+        }
+
+        .card:hover .capa1 {
+            top: 0%;
+            right: 0%;
+            transform: scale(1);
+        }
+
+        .card:hover .borde {
+            box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .card:hover .texto-oculto {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="https://picsum.photos/id/684/600/400" alt="">
+            <div class="capa capa1">
+                <div class="texto"> Lorem ipsum</div>
+                <div class="texto-oculto"> Lorem ipsum</div>
+            </div>
+            <div class="borde"></div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/564/600/400" alt="">
+            <div class="capa capa1">
+                <div class="texto"> Lorem ipsum</div>
+                <div class="texto-oculto"> Lorem ipsum</div>
+            </div>
+            <div class="borde"></div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/377/600/400" alt="">
+            <div class="capa capa1">
+                <div class="texto"> Lorem ipsum</div>
+                <div class="texto-oculto"> Lorem ipsum</div>
+            </div>
+            <div class="borde"></div>
+        </div>
+    </div>
+</body>
+
+</html>

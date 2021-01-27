@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+    <fieldset>
+        <legend>Rellenar</legend>
+        <input type="radio" name="idioma" value="idiomaingles"> Ingles <br>
+        <input type="radio" name="idioma" value="idiomaaleman"> Aleman <br>
+        <input type="radio" name="idioma" value="idiomafrances"> Frances <br>
+        <br>
+        <select name="conector">
+            <option value="usb">USB</option>
+            <option value="paralelo">Paralelo</option>
+            <option value="ps2">PS2</option>
+        </select><br>
+        Nombre<input type="text" name="nombre"><br>
+        Apellidos<input type="text" name="apellidos"><br>
+
+    </fieldset>
+    <fieldset>
+        <legend>Indique sus preferencias</legend>
+        <select name="sexo1" multiple>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+        </select><br>
+        <input type="checkbox" name="sexo2" value="sexohombre"> Hombre <br>
+        <input type="checkbox" name="sexo2" value="sexomujer"> Mujer <br>
+        Elija una fecha: <input type="date" name="fecha">
+        <input type="button" name="boton" value="Enviar">
+    </fieldset>
+    </form>
+    <div id="contenedor">
+
+    </div>
+    <div id="contenedorErrores">
+
+    </div>
+    <script type="" src="./formulario1.js"></script>
+</body>
+
+</html>

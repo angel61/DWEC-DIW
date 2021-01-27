@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+    <fieldset>
+        <legend>Indique sus preferencias</legend>
+        Elija una fecha: <input type="date"><br>
+        Elija un fichero: <input type="file"><br>
+        <input type="radio" name="procesador" value="procesadoramd"> AMD
+        <input type="radio" name="procesador" value="procesadorintel_i5"> Intel i5
+        <input type="radio" name="procesador" value="procesadorintel_i7"> Intel i7
+
+    </fieldset>
+    <fieldset>
+        <legend>Indique sus preferencias</legend>
+        <input type="radio" name="asignatura" value="asignaturamatematicas"> Matemáticas
+        <input type="radio" name="asignatura" value="asignaturahistoria"> Historia
+        <input type="radio" name="asignatura" value="asignaturageografia"> Geografía
+        <input type="radio" name="asignatura" value="asignaturalengua"> Lengua
+        <br>
+        Nombre<input type="text" name="nombre"><br>
+        Apellidos<input type="text" name="apellidos"><br>
+        Dirección<input type="text" name="direccion"><br>
+        <br>
+        Elije un color: <input id="inpColor" type="color">
+        <br>
+        <textarea id="txtaPrincipal" cols="59" rows="6" placeholder="Utilice este cuadro para escribir"></textarea><br>
+        Elija una fecha: <input type="date"><br>
+        <select name="idioma">
+            <option value="idiomaingles"> Ingles </option>
+            <option value="idiomaaleman"> Aleman </option>
+            <option value="idiomafrances"> Frances </option>
+        </select><br>
+        Elija una hora: <input type="time"><br>
+        Elija un fichero: <input type="file"><br>
+        <input type="checkbox" name="sexo" value="sexomujer"> Mujer
+        <input type="checkbox" name="sexo" value="sexohombre"> Hombre<br>
+        <input type="button" name="boton" value="Enviar">
+    </fieldset>
+</form>
+<div id="contenedor">
+
+</div>
+<div id="contenedorErrores">
+
+</div>
+<script type="" src="./formulario2.js"></script>
+</body>
+
+</html>

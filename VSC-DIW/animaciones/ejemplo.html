@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containeerP{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 350px;
+            gap: 20px;
+        }
+        .card{
+            position: relative;
+        }
+        .card img{
+            width: 100%;
+            height: 100%;
+        }
+        .capa{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-content: center;
+            row-gap: 50px;
+        }
+        .capa1{
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+
+            width: 0px;
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.514);
+
+            transition: 0.5s ease;
+        }
+        .capa2{
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+
+            width: 0px;
+            height: 0px;
+
+            background-color: rgba(0, 0, 0, 0.514);
+
+            transition:transform .8s, opacity .1s;
+            transform-origin: left top;
+            transform: rotate(-90deg);
+            opacity: .5s;
+        }
+        .capa3{
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+
+background-color: rgba(0, 0, 0, 0.514);
+
+            width: 100%;
+            height: 100%;
+
+            transition:.5s ease;
+        }
+        .texto{
+            color: white;
+            text-align: center;
+            transition: .5s ease;
+        }
+        .texto-oculto{
+            color: black;
+            text-align: center;
+            opacity: 0;
+
+            transition: .5s ease-in .5s;
+        }
+        .card:hover .capa1{
+            width: 100%;
+        }
+        .card:hover .capa2{
+            transform: rotate(0deg);
+            height: 100%;
+            width: 100%;
+        }
+        .card:hover .capa3 .texto{
+            font-size: 18px;
+            transform: translateY(-50px);
+        }
+        .card:hover .capa3 .texto-oculto{
+            opacity: 1;
+            transform: translateY(-50px);
+        }
+        .card3:hover img{
+            filter: sepia(100%);
+        }
+        .card3{
+            transition: .3s ease;
+        }
+        .card3 img{
+            transition: .3s ease;
+        }
+        .card3:hover{
+            box-shadow: 2px 5px 19px -8px rgba(0,0,0,0.92);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containeerP">
+        <div class="card">
+            <img src="https://picsum.photos/id/684/600/400" alt="">
+            <div class="capa capa1">
+                <div class="texto"> Hola buenaaaaaaaas</div></div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/684/600/400" alt="">
+            <div class="capa capa2">
+                <div class="texto"> Hola buenaaaaaaaas</div></div>
+        </div>
+        <div class="card card3">
+            <img src="https://picsum.photos/id/684/600/400" alt="">
+            <div class="capa capa3">
+                <div class="texto"> Hola buenaaaaaaaas</div>
+                <div class="texto-oculto"> Hola buenaaaaaaaas</div></div>
+        </div>
+    </div>
+</body>
+</html>

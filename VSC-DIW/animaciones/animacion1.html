@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .contenedor{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .bloque{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .bloque1{
+            animation-name: animacion1;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: alternate;
+        }
+        @keyframes animacion1 {
+            0%{
+                background-color: green;
+            }
+            100%{
+                background-color: yellow;
+            }
+        }
+        .bloque2{
+            animation-name: animacion2;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes animacion2 {
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: green;
+            }
+            100%{
+                background-color: yellow;
+            }
+        }
+        .bloque3{
+            position: relative;
+            animation-name: animacion3;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        @keyframes animacion3 {
+            0%,100%{
+                background-color: red;
+                bottom: 0px;
+                right: 0px;
+            }
+            25%{
+                background-color: green;
+                bottom: 200px;
+                right: 0px;
+            }
+            50%{
+                background-color: yellow;
+                bottom: 200px;
+                right: 200px;
+            }
+            75%{
+                background-color: blue;
+                bottom: 0px;
+                right: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="bloque bloque1"></div>
+        <div class="bloque bloque2"></div>
+        <div class="bloque bloque3"></div>
+    </div>
+</body>
+</html>
