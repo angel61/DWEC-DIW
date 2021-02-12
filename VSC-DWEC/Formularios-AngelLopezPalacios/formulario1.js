@@ -57,9 +57,10 @@ var clickFunc = () => {
 
     //Validacion sexo2
     for (let i = 0; i < sexo2.length; i++) {
-        if (sexo2[i].checked)
+        if (sexo2[i].checked) {
             contenedor.innerHTML += (`Valor del sexo2 seleccionado: ${sexo2[i].value}<br>`);
-        boolSexo2 = true;
+            boolSexo2 = true;
+        }
     }
     if (!boolSexo2)
         errores.innerHTML += "El valor del campo sexo2 no es valido<br>"

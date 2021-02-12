@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>Rellenar</legend>
+      <input type='radio' name='asignatura' value='asignaturalengua'> Lengua <br />
+      <input type='radio' name='asignatura' value='asignaturamatematicas'> Matemáticas <br />
+      <input type='radio' name='asignatura' value='asignaturahistoria'> Historia <br />
+      <input type='radio' name='asignatura' value='asignaturageografia'> Geografía <br />
+      <br />
+      <input type='checkbox' name='editor' value='editornotepad'> Notepad
+      <input type='checkbox' name='editor' value='editoremacs'> Emacs
+      <input type='checkbox' name='editor' value='editorotro'> Otro
+      <br />
+      <textarea id="txtArea" placeholder="Utilice este cuadro para escribir"></textarea> <br />
+      <select name='procesador'>
+        <option value='amd'>AMD</option>
+        <option value='intel_i5'>Intel i5</option>
+        <option value='intel_i7'>Intel i7</option>
+      </select>
+      <br />
+    </fieldset><br>
+    <input type="button" name="boton" value="Enviar">
+  </form>
+  <div id="contenedor">
+
+  </div>
+  <div id="contenedorErrores">
+
+  </div>
+  <script type="" src="./formulario4.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>Indique</legend>
+      Nombre<input type='text' name='nombre'>
+      Apellidos<input type='text' name='apellidos'>
+      <br />
+      Elija una fecha:<input type="date" id="fecha"> <br />
+      <textarea id="txtArea1" placeholder="Por favor, escriba aquí"></textarea> <br />
+      <select name='hardware'>
+        <option value='monitor_led'>Monitor LED</option>
+        <option value='ssd'>SSD</option>
+      </select>
+      <br />
+      <input type='radio' name='ide' value='ideeclipse'> Eclipse
+      <input type='radio' name='ide' value='idenetbeans'> Netbeans
+      <input type='radio' name='ide' value='idenotepad'> Notepad
+      <input type='radio' name='ide' value='ideidea'> IDEA
+      <br />
+      <input type='checkbox' name='asignatura1' value='asignaturamatematicas'> Matemáticas <br />
+      <input type='checkbox' name='asignatura1' value='asignaturahistoria'> Historia <br />
+      <input type='checkbox' name='asignatura1' value='asignaturageografia'> Geografía <br />
+      <input type='checkbox' name='asignatura1' value='asignaturalengua'> Lengua <br />
+      <br />
+      Elija un fichero:<input type="file" id="fichero1"> <br />
+      Elija un color:<input type="color" id="color1"> <br />
+    </fieldset>
+    <fieldset>
+      <legend>Preferencias</legend>
+      Elija un color:<input type="color" id="color2"> <br />
+      <select name='ciclo' multiple='multiple'>
+        <option value='asir'>ASIR</option>
+        <option value='dam'>DAM</option>
+        <option value='daw'>DAW</option>
+      </select>
+      <br />
+      Elija un fichero:<input type="file" id="fichero2"> <br />
+      <textarea id="txtArea2" placeholder="Escriba aquí, por favor"></textarea> <br />
+      DNI<input type='text' name='dni'>
+      Nombre<input type='text' name='nombre'>
+      Apellidos<input type='text' name='apellidos'>
+      Telefono<input type='text' name='telefono'>
+      <br />
+      <input type='checkbox' name='asignatura2' value='asignaturahistoria'> Historia <br />
+      <input type='checkbox' name='asignatura2' value='asignaturageografia'> Geografía <br />
+      <input type='checkbox' name='asignatura2' value='asignaturalengua'> Lengua <br />
+      <input type='checkbox' name='asignatura2' value='asignaturamatematicas'> Matemáticas <br />
+      <br />
+      Elija una hora:<input type="time" id="hora"> <br />
+    </fieldset><br>
+    <input type="button" name="boton" value="Enviar">
+  </form>
+  <div id="contenedor">
+
+  </div>
+  <div id="contenedorErrores">
+
+  </div>
+  <script type="" src="./formulario9.js"></script>
+</body>
+
+</html>

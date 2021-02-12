@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>Completar</legend>
+      Elija un color:<input type="color" id="color"> <br />
+      Nombre<input type='text' name='nombre'> <br />
+      Apellidos<input type='text' name='apellidos'> <br />
+      Telefono<input type='text' name='telefono'> <br />
+      <br />
+      <input type='checkbox' name='asignatura' value='asignaturalengua'> Lengua
+      <input type='checkbox' name='asignatura' value='asignaturamatematicas'> Matemáticas
+      <input type='checkbox' name='asignatura' value='asignaturahistoria'> Historia
+      <input type='checkbox' name='asignatura' value='asignaturageografia'> Geografía
+      <br />
+      Elija un fichero:<input type="file" id="fichero1"> <br />
+      <textarea id="txtArea" placeholder="Utilice este cuadro para escribir"></textarea> <br />
+      <input type='radio' name='formato' value='formatojpg'> JPG
+      <input type='radio' name='formato' value='formatopng'> PNG
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend>Completar</legend>
+      Nombre<input type='text' name='nombre'> <br />
+      Apellidos<input type='text' name='apellidos'> <br />
+      Direccion<input type='text' name='direccion'> <br />
+      <br />
+      Elija una fecha:<input type="date" id="fecha"> <br />
+      <select name='conector' multiple='multiple'>
+        <option value='usb'>USB</option>
+        <option value='paralelo'>Paralelo</option>
+        <option value='ps2'>PS2</option>
+      </select>
+      <br />
+      Elija un fichero:<input type="file" id="fichero2"> <br />
+    </fieldset><br>
+    <input type="button" name="boton" value="Enviar">
+  </form>
+  <div id="contenedor">
+
+  </div>
+  <div id="contenedorErrores">
+
+  </div>
+  <script type="" src="./formulario5.js"></script>
+</body>
+
+</html>
