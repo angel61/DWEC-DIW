@@ -1,0 +1,113 @@
+{
+   "informacion":{
+      "nombre":"Ángel",
+      "apellidos":"López Palacios",
+      "foto":"ANGEL.jpg",
+      "oficio":"Programador",
+      "email":"Angellopezpalacios61@gmail.com",
+      "telefono":"(+34) 645 240 250",
+      "ubicacion":{
+         "direccion":"Plz. Oñate 3, 2ºA",
+         "cp":"19001",
+         "ciudad":"Guadalajara",
+         "pais":"España"
+      }
+   },
+   "experiencia":[
+      {
+         "empresa":"Rayet SL",
+         "resumen":"Prácticas formativas de empresa. Realizó trabajos de instalación, configuración y mantenimiento de sistemas microinformáticos, aislados y en red, así como redes locales en pequeños entornos.",
+         "año":"2018",
+         "ubicacion":"Guadalajara"
+      },
+      {
+         "empresa":" Inmobiliaria López Abad",
+         "resumen":"Colaboraciones temporales de verano haciendo: mantenimiento de equipos informáticos y red local y creación de página web.",
+         "año":"2019 / 2020",
+         "ubicacion":"Guadalajara"
+      }
+   ],
+   "estudios":[
+      {
+         "centro":"IES Brianda de Mendoza de Guadalajara",
+         "cursos":[
+            {
+               "año":"2016 – 2018",
+               "curso":"Ciclo formativo de grado medio Sistemas Microinformáticos y Redes."
+            },
+            {
+               "año":"2018 – 2020",
+               "curso":"Ciclo formativo de grado superior Desarrollo De Aplicaciones Multiplataforma."
+            }
+         ]
+      },
+      {
+         "centro":"IES Arcipreste de Hita de Azuqueca de Henares (Guadalajara)",
+         "cursos":[
+            {
+               "año":"2020 – 2021",
+               "curso":"Ciclo formativo de grado superior Desarrollo de Aplicaciones Web."
+            }
+         ]
+      }
+   ],
+   "programacion":[
+      {
+         "lenguaje":"Java",
+         "nivel":4
+      },
+      {
+         "lenguaje":"Python",
+         "nivel":2
+      },
+      {
+         "lenguaje":"C#",
+         "nivel":3
+      },
+      {
+         "lenguaje":"Css",
+         "nivel":3
+      },
+      {
+         "lenguaje":"PHP",
+         "nivel":4
+      },
+      {
+         "lenguaje":"JavaScript",
+         "nivel":3
+      }
+   ],
+   "sgbd":[
+      {
+         "lenguaje":"MySQL",
+         "nivel":4
+      },
+      {
+         "lenguaje":"MongoBD",
+         "nivel":2
+      },
+      {
+         "lenguaje":"Oracle",
+         "nivel":3
+      },
+      {
+         "lenguaje":"SqLite",
+         "nivel":4
+      },
+      {
+         "lenguaje":"PostgreSQL",
+         "nivel":3
+      }
+   ],
+   "idiomas":[
+      {
+         "lenguaje":"Ingles",
+         "nivel":3
+      }
+   ],
+   "aptitudes":[
+      "Iniciativa",
+      "Constancia",
+      "Disciplinado"
+   ]
+}
