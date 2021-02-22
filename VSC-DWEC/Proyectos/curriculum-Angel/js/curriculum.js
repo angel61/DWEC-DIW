@@ -1,20 +1,35 @@
-
+//Cabecera
 var foto = document.getElementById("foto");
 var nombre = document.getElementById("nombre");
 var oficio = document.getElementById("oficio");
 var correo = document.getElementById("correo");
+var github = document.getElementById("github");
 var telefono = document.getElementById("telefono");
 var ubicacion = document.getElementById("ubicacion");
+
+//Columna izquierda
 var formacion = document.getElementById("formacion");
+
 var experiencia = document.getElementById("experiencia");
+
+var aptitudes = document.getElementById("aptitudes");
+
+var conocimientos = document.getElementById("conocimientos");
+
+//Columna derecha
 var programacionnom = document.getElementById("programacion-nombre");
 var programacionniv = document.getElementById("programacion-nivel");
+
 var sgbdnom = document.getElementById("sgbd-nombre");
 var sgbdniv = document.getElementById("sgbd-nivel");
-var aptitudes = document.getElementById("aptitudes");
+
+var lmarcanom = document.getElementById("lmarcas-nombre");
+var lmarcaniv = document.getElementById("lmarcas-nivel");
+
 var idiomanom = document.getElementById("idioma-nombre");
 var idiomaniv = document.getElementById("idioma-nivel");
 
+//Funcion para cargar los elementos con estrellas
 const nivelEstrellas = (elementos) => {
     let retorno = [];
     let elementosNombre = "";
@@ -39,6 +54,8 @@ const nivelEstrellas = (elementos) => {
     retorno[1] = elementosNivel;
     return retorno;
 }
+
+//Funcion para cargar los estudios
 const fncEtudios = (estudios) => {
     let estudiostxt = "";
     estudios.forEach(element => {
@@ -51,6 +68,8 @@ const fncEtudios = (estudios) => {
     });
     return estudiostxt;
 }
+
+//Funcion para cargar la experiencia laboral
 const fncExperiencia = (experiencia) => {
     let experienciatxt = "";
     experiencia.forEach(element => {
@@ -60,17 +79,34 @@ const fncExperiencia = (experiencia) => {
 }
 
 const tratarDatos = (misdatos) => {
-    foto.innerHTML += `<img class="w-25" src="img/${misdatos.informacion.foto}"/>`;
+    //Cabecera
+    let imagen = document.createElement("IMG");
+    imagen.src = `img/${misdatos.informacion.foto}`;
+    imagen.className = "w-25";
+    foto.appendChild(imagen);
     nombre.innerHTML += `${misdatos.informacion.nombre + " " + misdatos.informacion.apellidos}`;
     oficio.innerHTML += `${misdatos.informacion.oficio}`;
     correo.innerHTML += `<a href="mailto:${misdatos.informacion.email}">${misdatos.informacion.email}</a>`;
+    github.innerHTML += `<a href="${misdatos.informacion.github.link}">${misdatos.informacion.github.nombre}</a>`;
     telefono.innerHTML += `${misdatos.informacion.telefono}`;
     ubicacion.innerHTML += `${misdatos.informacion.ubicacion.direccion}<br>${misdatos.informacion.ubicacion.cp} - ${misdatos.informacion.ubicacion.ciudad}`;
 
+    //Columna izquierda
     formacion.innerHTML += fncEtudios(misdatos.estudios);
 
     experiencia.innerHTML += fncExperiencia(misdatos.experiencia);
 
+    let aptitudesSet = new Set(misdatos.aptitudes);
+    aptitudesSet.forEach(element => {
+        aptitudes.innerHTML += `<li>${element}</li>`;
+    });
+
+    let conocimientosSet = new Set(misdatos.otroscon);
+    conocimientosSet.forEach(element => {
+        conocimientos.innerHTML += `<li>${element}</li>`;
+    });
+
+    //Columna derecha
     let programacion = nivelEstrellas(misdatos.programacion);
     programacionnom.innerHTML += programacion[0];
     programacionniv.innerHTML += programacion[1];
@@ -79,18 +115,15 @@ const tratarDatos = (misdatos) => {
     sgbdnom.innerHTML += sgbd[0];
     sgbdniv.innerHTML += sgbd[1];
 
-    misdatos.aptitudes.forEach(element => {
-        aptitudes.innerHTML+=`<li>${element}</li>`;
-    });
+    let lmarcas = nivelEstrellas(misdatos.lmarcas);
+    lmarcanom.innerHTML += lmarcas[0];
+    lmarcaniv.innerHTML += lmarcas[1];
 
     let idioma = nivelEstrellas(misdatos.idiomas);
     idiomanom.innerHTML += idioma[0];
     idiomaniv.innerHTML += idioma[1];
 
 };
-
-
-
 
 async function getJSON() {
     let response = await fetch('json/curriculum.json');
