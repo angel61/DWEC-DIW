@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+body{ 
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg-inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+}
+
+.fila{
+    min-height: 100vh;
+}
+
+.tarjeta {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.texto {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    row-gap: 50px;
+
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    overflow: hidden;
+
+    background-color: rgba(0, 0, 0, 0.514);
+
+    transition: 0.5s ease;
+}
+
+.borde {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease;
+}
+
+.nombre {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.autor {
+    color: white;
+    text-align: center;
+    opacity: 0;
+    border-top: 1px solid white;
+    padding-top: 5px;
+    font-style: italic;
+    margin: 0 2em;
+
+    transition: .7s ease-in-out .5s;
+}
+
+.tarjeta:hover .texto {
+    top: 0%;
+    right: 0%;
+    transform: scale(1);
+}
+
+.tarjeta:hover .borde {
+    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta:hover .autor {
+    opacity: 1;
+}

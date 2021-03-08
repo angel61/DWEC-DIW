@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{ 
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg-inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.formulario{
+    position: relative;
+    
+    animation-name: formulario;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fondo-primario{
+    background-color: #495F8C;
+}
+.borde-primario{
+    border-color: #495F8C;
+}
+.color-primario{
+    color: #495F8C;
+}
+
+@keyframes formulario {
+    0%{
+        top: -50%;
+        opacity: 0;
+    }
+    100%{
+        top: 0%;
+        opacity: 1;
+    }
+}
+textarea {
+    resize: none;
+  }

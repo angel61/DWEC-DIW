@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+body{ 
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg-inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(1px);
+    overflow: hidden;
+}
+.angel{
+    position: absolute;
+    left: 20%;
+    animation-name: animacionAngel;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacionAngel {
+    0%{
+        bottom: -600px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+.titulo{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+
+    transform: translate(-50%, -50%);
+    color: white;
+    animation-name: titulo;
+    animation-duration: 4s;
+    animation-timing-function: ease ;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes titulo {
+    0%{
+        top: 0%;
+        opacity: 0;
+    }
+    100%{
+        top: 50%;
+        opacity: 1;
+    }
+}
